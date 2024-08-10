@@ -215,7 +215,7 @@ const Product = () => {
           <ImagePlaceholder style={{ backgroundColor: "#c5c5c5" }} src={manufacturing2} />
           <TextContainer>
             <Text>
-              Atomwalk Office supports Manufacturing ERP with cutting-edge technology, offering cloud services that provide small and medium businesses with the tools they need to stay competitive. Our platform includes Project Management, Inventory Management, Process Template Modules, and more.
+              Atomwalk Office supports Manufacturing ERP with cutting-edge technology and offering cloud services that provide small and medium businesses with the tools they need to stay competitive. Our platform includes Project Management, Inventory Management, Process Template Modules, and more.
             </Text>
             <List>
               <ListItem>Rule-based Account Reconciliation with Sales, Purchase, and Accounting Modules</ListItem>
