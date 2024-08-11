@@ -6,7 +6,7 @@ export const Wrap = styled.div`
   width: 520px;
   text-align: center;
   position: absolute;
-  top: 43%;
+  top: 25%;
   transform: translate(0, -30%);
   margin-left: 230px;
 

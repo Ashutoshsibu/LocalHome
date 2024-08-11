@@ -19,12 +19,12 @@ function App() {
       <Router>
         <Routes>
           <Route path="" element={<HomePage />} />
-          <Route path="/signin" element={<Login />} />
-          <Route path="/forgotpassword" element={<ForgetPassword />} />
-          <Route path="/card" element={<Newcard />} />
-          <Route path="/Product" element={<Product />} />
-          <Route path="/contactUs" element={<ContactUs />} />
-          <Route path="/aboutUs" element={<AbotUs />} />
+          <Route path="/signin.html" element={<Login />} />
+          <Route path="/forgotpassword.html" element={<ForgetPassword />} />
+          <Route path="/card.html" element={<Newcard />} />
+          <Route path="/Product.html" element={<Product />} />
+          <Route path="/contactUs.html" element={<ContactUs />} />
+          <Route path="/aboutUs.html" element={<AbotUs />} />
         </Routes>
       </Router>
       <Footer2></Footer2>

@@ -33,7 +33,7 @@ export const NavBar = () => {
   }
 
   const navigatet=()=>{
-    window.location.href="/signin"
+    window.location.href="/signin.html"
   }
 
   return (
@@ -47,10 +47,10 @@ export const NavBar = () => {
           </Navbar.Toggle>
           <Navbar.Collapse id="basic-navbar-nav">
             <Nav className="ms-auto">
-              <Nav.Link href="/Product" className={activeLink === 'Product' ? 'active navbar-link' : 'navbar-link'} onClick={() => onUpdateActiveLink('Product')}>Products</Nav.Link>
+              <Nav.Link href="/Product.html" className={activeLink === 'Product' ? 'active navbar-link' : 'navbar-link'} onClick={() => onUpdateActiveLink('Product')}>Products</Nav.Link>
               <Nav.Link href="#skills" className={activeLink === 'skills' ? 'active navbar-link' : 'navbar-link'} onClick={() => onUpdateActiveLink('skills')}>Resource</Nav.Link>
-              <Nav.Link href="/aboutUs" className={activeLink === 'about' ? 'active navbar-link' : 'navbar-link'} onClick={() => onUpdateActiveLink('about')}>About Us</Nav.Link>
-              <Nav.Link href="/contactUs" className={activeLink === 'projects' ? 'active navbar-link' : 'navbar-link'} onClick={() => onUpdateActiveLink('projects')}>Contact Us</Nav.Link>
+              <Nav.Link href="/aboutUs.html" className={activeLink === 'about' ? 'active navbar-link' : 'navbar-link'} onClick={() => onUpdateActiveLink('about')}>About Us</Nav.Link>
+              <Nav.Link href="/contactUs.html" className={activeLink === 'projects' ? 'active navbar-link' : 'navbar-link'} onClick={() => onUpdateActiveLink('projects')}>Contact Us</Nav.Link>
             </Nav>
             <span className="navbar-text">
 

@@ -170,7 +170,7 @@ export default function Footer2() {
         </FooterLinks>
       </FooterLinksContainer>
       <FooterBottom>
-        <p>© 2024 Vdigtech. All Rights Reserved.</p>
+        <p>© 2024 Atomwalk. All Rights Reserved.</p>
         <p>
           Privacy Policy | Terms & Conditions | Made with <span>♥</span> Atomwalk
         </p>
