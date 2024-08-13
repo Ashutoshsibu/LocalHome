@@ -1,6 +1,5 @@
 import React from "react";
 import styled from "styled-components";
-import colorSharp from "../assets/img/project-img3.png";
 import { Col } from "react-bootstrap";
 
 const Manwarp = styled.div`
@@ -43,17 +42,17 @@ const Manwarp = styled.div`
     transform: scale(1.05); /* Scales the image slightly on hover */
   }
 `;
-const Maintext = styled.div`
-margin-top: 10px;
-  padding-left: 20px;
-  position: absolute;
-  color: black;
-  font-family: Centra;
-  font-size: 33px;
-  line-height: 1.1;
-  font-weight: 500;
-  z-index: 3;
-`;
+// const Maintext = styled.div`
+// margin-top: 10px;
+//   padding-left: 20px;
+//   position: absolute;
+//   color: black;
+//   font-family: Centra;
+//   font-size: 33px;
+//   line-height: 1.1;
+//   font-weight: 500;
+//   z-index: 3;
+// `;
 const Buttonexp = styled.div`
   position: absolute;
   border: 2px solid white;

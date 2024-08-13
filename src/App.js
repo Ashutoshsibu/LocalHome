@@ -1,7 +1,7 @@
 import "./App.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 import { NavBar } from "./components/NavBar";
-import { Footer } from "./components/Footer";
+// import { Footer } from "./components/Footer";
 import HomePage from "./components/HomePage";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import Login from "./components/loginpage/Login";
@@ -11,6 +11,7 @@ import Product from "./components/Product";
 import ContactUs from "./components/ContactUs";
 import AbotUs from "./components/AbotUs";
 import Footer2 from "./components/Footer2";
+import Askme from "./components/loginpage/Askme";
 
 function App() {
   return (
@@ -25,6 +26,7 @@ function App() {
           <Route path="/Product.html" element={<Product />} />
           <Route path="/contactUs.html" element={<ContactUs />} />
           <Route path="/aboutUs.html" element={<AbotUs />} />
+          <Route path="/askme.html" element={<Askme />} />
         </Routes>
       </Router>
       <Footer2></Footer2>
