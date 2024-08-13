@@ -12,8 +12,11 @@ import ContactUs from "./components/ContactUs";
 import AbotUs from "./components/AbotUs";
 import Footer2 from "./components/Footer2";
 import Askme from "./components/loginpage/Askme";
+import FloatingActionButton from "./components/FloatingActionButton";
+import { useState } from "react";
 
 function App() {
+  const[openslide,setOpenslide]=useState(false)
   return (
     <div className="App">
       <NavBar></NavBar>
@@ -29,6 +32,8 @@ function App() {
           <Route path="/askme.html" element={<Askme />} />
         </Routes>
       </Router>
+      {openslide&&<Askme setOpenslide={setOpenslide}/>}
+      <FloatingActionButton setOpenslide={setOpenslide}></FloatingActionButton>
       <Footer2></Footer2>
     </div>
   );

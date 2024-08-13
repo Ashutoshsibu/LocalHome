@@ -621,3 +621,11 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   letter-spacing: 0.5px;
   margin-top: 20px;
 }
+/**********chartbot********/
+.custom-overlay-class {
+  z-index: 9998745475743666666; /* Set z-index for the overlay */
+}
+
+.custom-pane-class {
+  z-index: 9998745475744444444; /* Set z-index for the sliding pane */
+}
