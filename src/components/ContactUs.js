@@ -1,12 +1,16 @@
 import React from 'react';
 import styled from 'styled-components';
 import contactus from "../assets/img/contactus.jpg";
+import colorSharp from "../assets/img/color-sharp.png"
 
 const ContactSection = styled.section`
   display: flex;
   flex-direction: column;
   align-items: center;
-  background-color: #02050a;
+  background-image: url(${colorSharp});
+  background-position: left center;
+  background-repeat: no-repeat;
+  /* background-color: #02050a; */
   padding: 50px 20px;
   color: white;
 
@@ -52,7 +56,7 @@ const ContactForm = styled.form`
   transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
   &:hover{
   transform: scale(1.05);
-  box-shadow: 0 4px 57px -9px #69c0c2;
+  box-shadow: 0 4px 57px -9px #9553ba;
   }
 `;
 
@@ -89,10 +93,10 @@ const Button = styled.button`
   width: 100%;
   padding: 10px;
   margin-top: 20px;
-  background-color: #69c0c2;
+  background: linear-gradient(90.21deg, rgba(170, 54, 124, 0.5) -5.91%, rgba(74, 47, 189, 0.5) 111.58%);
   border: none;
   border-radius: 5px;
-  color: black;
+  color: white;
   font-size: 1em;
   font-weight:500;
   cursor: pointer;

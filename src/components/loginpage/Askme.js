@@ -1,9 +1,10 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import styled from "styled-components";
 import axios from "axios";
 import ReactMarkdown from "react-markdown";
 import SlidingPane from "react-sliding-pane";
 import "react-sliding-pane/dist/react-sliding-pane.css";
+import Robo from './images/blue-robot-holding-a-sign-with-space-chatbot-icon-concept-chat-bot-or-chatterbot-png-image-vector-removebg-preview.png';
 
 // Styled components
 const ChatContainer = styled.div`
@@ -25,13 +26,13 @@ const Header = styled.div`
   justify-content: space-between;
   width: 100%;
   padding: 12px 16px;
-  background-color: #3182ce;
+  background-color: #5c0295;
   color: #ffffff;
   font-weight: bold;
 `;
 
 const Avatar = styled.div`
-  background-color: #2b6cb0;
+  background-color:  #6236c5;
   border-radius: 50%;
   width: 40px;
   height: 40px;
@@ -48,12 +49,20 @@ const ChatBox = styled.div`
   overflow-y: auto;
   background-color: #f7fafc;
 `;
+const Charboat = styled.div`
+display: flex;
+align-items: center;
+justify-content: center;
+color:  #8e36c5;
+margin-top: 50%;
+font-weight: 500;
+`;
 
 const Message = styled.div`
   margin: 8px 0;
   padding: 10px;
   border-radius: 8px;
-  background-color: ${(props) => (props.isBot ? "#5a67d8" : "#edf2f7")};
+  background-color: ${(props) => (props.isBot ? "#8e36c5" : "#edf2f7")};
   color: ${(props) => (props.isBot ? "#ffffff" : "#1a202c")};
   align-self: ${(props) => (props.isBot ? "flex-start" : "flex-end")};
   max-width: 80%;
@@ -80,7 +89,7 @@ const Input = styled.input`
 const SendButton = styled.button`
     width: 45px;
     height: 45px;
-  background-color: #3182ce;
+  background-color: #5c0295;  
   color: #ffffff;
   border: none;
   padding: 8px;
@@ -92,7 +101,7 @@ const SendButton = styled.button`
   align-items: center;
 
   &:hover {
-    background-color: #2b6cb0;
+    background-color: #6236c5;
   }
 `;
 
@@ -105,8 +114,8 @@ const LinkButtonContainer = styled.div`
 `;
 
 const LinkButton = styled.button`
-  border: 1px solid #3182ce;
-  color: #3182ce;
+  border: 1px solid #8e36c5;
+  color:#8e36c5;
   background-color: #ffffff;
   padding: 8px 12px;
   border-radius: 20px;
@@ -123,9 +132,13 @@ function Askme(props) {
   const [messages, setMessages] = useState([]);
   const [userInput, setUserInput] = useState("");
   const [isLoading, setIsLoading] = useState(false);
+  const[callApi,setCallApi]=useState(false);
 
   const handleSendMessage = async (e) => {
-    e.preventDefault();
+    if(e){
+      e.preventDefault();
+    }
+
     if (userInput.trim() === "") return;
 
     // Add user message to chat
@@ -162,9 +175,18 @@ function Askme(props) {
 const handeleclose=()=>{
 props.setOpenslide(false)
 }
+
 const valuesend=(data)=>{
+  setCallApi(true);
   setUserInput(data);
 }
+
+useEffect(()=>{
+if(callApi){
+  setCallApi(false)
+  handleSendMessage()
+}
+},[userInput])
   return (
     <SlidingPane
       className="custom-pane-class"
@@ -187,7 +209,9 @@ const valuesend=(data)=>{
             </Message>
           ))}
           {isLoading && <Message isBot={true}>Generating...</Message>}
+          {messages.length==0&&<Charboat>Hii how can i help you💁‍♀️</Charboat>}
         </ChatBox>
+    
         <LinkButtonContainer>
           <LinkButton onClick={()=>valuesend("What is Manufacturing ERP ?")}>What is Manufacturing ERP ?</LinkButton>
           <LinkButton  onClick={()=>valuesend("Why Business need Manufacturing ERP ?")}>Why Business need Manufacturing ERP ?</LinkButton>
@@ -195,13 +219,13 @@ const valuesend=(data)=>{
           <LinkButton  onClick={()=>valuesend("How Atomwalk office support Manufacturing ERP ?")}>How Atomwalk office support Manufacturing ERP ?</LinkButton>
           <LinkButton  onClick={()=>valuesend("What is CRM")}>What is CRM</LinkButton>
         </LinkButtonContainer>
-        <InputContainer onSubmit={handleSendMessage}>
+        <InputContainer>
           <Input
             value={userInput}
             onChange={(e) => setUserInput(e.target.value)}
             placeholder="Type your message..."
           />
-          <SendButton type="submit" disabled={isLoading}>
+          <SendButton type="submit" disabled={isLoading} onClick={handleSendMessage}>
             ➤
           </SendButton>
         </InputContainer>

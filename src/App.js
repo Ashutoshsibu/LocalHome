@@ -13,10 +13,25 @@ import AbotUs from "./components/AbotUs";
 import Footer2 from "./components/Footer2";
 import Askme from "./components/loginpage/Askme";
 import FloatingActionButton from "./components/FloatingActionButton";
-import { useState } from "react";
+import { useEffect, useState } from "react";
+import ProductDemoModal from "./components/ProductDemoModal";
 
 function App() {
   const[openslide,setOpenslide]=useState(false)
+  const [modalIsOpen, setModalIsOpen] = useState(false);
+
+  const openModal = () => {
+    setModalIsOpen(true);
+  };
+useEffect(()=>{
+  setTimeout(() => {
+    openModal()
+  }, 6000);
+
+},[])
+  const closeModal = () => {
+    setModalIsOpen(false);
+  };
   return (
     <div className="App">
       <NavBar></NavBar>
@@ -33,6 +48,7 @@ function App() {
         </Routes>
       </Router>
       {openslide&&<Askme setOpenslide={setOpenslide}/>}
+      <ProductDemoModal isOpen={modalIsOpen} onRequestClose={closeModal} />
       <FloatingActionButton setOpenslide={setOpenslide}></FloatingActionButton>
       <Footer2></Footer2>
     </div>
