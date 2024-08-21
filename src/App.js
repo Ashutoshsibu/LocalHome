@@ -15,6 +15,7 @@ import Askme from "./components/loginpage/Askme";
 import FloatingActionButton from "./components/FloatingActionButton";
 import { useEffect, useState } from "react";
 import ProductDemoModal from "./components/ProductDemoModal";
+import Resource from "./components/Resource";
 
 function App() {
   const[openslide,setOpenslide]=useState(false)
@@ -44,7 +45,7 @@ useEffect(()=>{
           <Route path="/Product.html" element={<Product />} />
           <Route path="/contactUs.html" element={<ContactUs />} />
           <Route path="/aboutUs.html" element={<AbotUs />} />
-          <Route path="/askme.html" element={<Askme />} />
+          <Route path="/askme.html" element={<Resource />} />
         </Routes>
       </Router>
       {openslide&&<Askme setOpenslide={setOpenslide}/>}

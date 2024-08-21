@@ -14,7 +14,7 @@ const PricingContainer = styled.div`
 `;
 
 const Title = styled.h1`
-  font-size: 3.5em;
+  font-size: 3.2em;
   margin-bottom: 100px;
   text-align: center;
 `;

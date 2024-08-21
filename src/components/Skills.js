@@ -67,7 +67,7 @@ export const Skills = () => {
     }
   };
   const navigatet=()=>{
-    window.location.href="/signin"
+    window.location.href="https://www.atomwalk.com/login/"
   }
   return (
     <section className="skill" id="skills">

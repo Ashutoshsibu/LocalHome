@@ -65,6 +65,7 @@ const Message = styled.div`
   background-color: ${(props) => (props.isBot ? "#8e36c5" : "#edf2f7")};
   color: ${(props) => (props.isBot ? "#ffffff" : "#1a202c")};
   align-self: ${(props) => (props.isBot ? "flex-start" : "flex-end")};
+  margin-left:${(props) => (props.isBot ? "115px" : "")};
   max-width: 80%;
 `;
 

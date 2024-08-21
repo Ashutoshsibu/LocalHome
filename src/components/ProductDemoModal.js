@@ -21,7 +21,7 @@ const customStyles = {
     maxWidth: "750px",
   },
   overlay: {
-    backgroundColor: "#515151c9",
+    backgroundColor: "rgba(0, 0, 0, .8)",
     zIndex: "32333",
   },
 };
