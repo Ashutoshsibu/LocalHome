@@ -38,15 +38,16 @@ import MurataImg from "./images/lifeintelect.jpg";
 // import Beiersdorf from "../images/beiersdorf.svg";
 
 const TrustedWrapper = styled.div`
-  /* padding-top: 75px; */
-  margin-top: 70px;
+  padding-bottom: 75px;
+  background-color: aliceblue;
+  /* margin-bottom: 70px; */
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  margin-bottom: 60px;
+  /* margin-bottom: 60px; */
   @media screen and (max-width: 767px) {
-    margin-top: 120px;
+    /* margin-top: 120px; */
     height: 100%;
   }
 `;
@@ -59,7 +60,7 @@ const CustomerLogo = styled.div`
   width: 100%;
   /* margin-top: 40px; */
   row-gap: 40px;
-  background-color: #f5f5f5;
+  background-color: #95f5d9;
   row-gap: 0;
 
   @media screen and (max-width: 767px) {
@@ -122,7 +123,7 @@ export default function TrustedCustomer() {
         <div style={{ textAlign: "center", width: "70%" }}>
           <P
             text="Global Market leaders trust Atomwalk to design the next opportunity"
-            color="#fffff"
+            color="#2c3e50"
             fontSize="45px"
             lineHeight="50px"
             fontWeight="900"

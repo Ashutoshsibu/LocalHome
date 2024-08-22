@@ -21,35 +21,41 @@ const Features = () => {
       description:
         "Efficiently manage your manufacturing operations with Atomwalk Office",
       imgUrl: projImg1,
+      background:"#fff8e6"
     },
     {
       title: "Inventory Management",
       description: "Take control of your inventory with Atomwalk Office",
       imgUrl: projImg2,
+      background:"#EEFAF4"
     },
     {
       title: "HR & Payroll",
       description:
         "Effortlessly handle HR and payroll tasks with Atomwalk Office",
       imgUrl: projImg3,
+       background:"#e6ffff"
     },
     {
       title: "Customer Management",
       description:
         "Deliver exceptional customer service and boost sales with Atomwalk Office",
       imgUrl: projImg4,
+      background:"#EEFAF4"
     },
     {
       title: "Accounting & Financials",
       description:
         "Manage your accounting and financials seamlessly with Atomwalk Office",
       imgUrl: projImg5,
+      background:"#e6ffff"
     },
     {
       title: "Project Management",
       description:
         "Make informed decisions based on real-time information and analytics provided by Atomwalk Office",
       imgUrl: projImg6,
+      background:"#fff8e6"
     },
   ];
   return (

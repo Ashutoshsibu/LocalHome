@@ -92,14 +92,14 @@ nav.navbar {
 }
 nav.navbar.scrolled {
   padding: 0px 0;
-  background-color: #121212;
+  background-color:rgb(227 227 227);
 }
 nav.navbar a.navbar-brand {
     width: 9%;
 }
 nav.navbar .navbar-nav .nav-link.navbar-link {
-  font-weight: 400;
-  color: #fff !important;
+  font-weight: 500;
+  color: rgb(30, 36, 63);
   letter-spacing: 0.8px;
   padding: 0 25px;
   font-size: 18px;
@@ -347,20 +347,22 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 .project {
   padding: 80px 0;
   position: relative;
+  background-color: rgb(242, 250, 255);
 }
 .project h2 {
 	font-size: 45px;
 	font-weight: 700;
   text-align: center;
+  color: #2c3e50;
 }
 .project p {
-  color: #B8B8B8;
+  color:#7f8c8d;
   font-size: 18px;
   letter-spacing: 0.8px;
   line-height: 1.5em;
   margin: 14px auto 30px auto;
   text-align: center;
-  width: 56%;
+  width: 76%;
 }
 .project .nav.nav-pills {
   width: 72%;
@@ -470,11 +472,14 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 
 /************ Projects Css ************/
 .contact {
-  background-image: url('./assets/img/color-sharp.png');
+  /* background-image: url('./assets/img/color-sharp.png'); */
+  background-color: #90e0ef;
   background-position: left center;
   /* background-size: cover; */
   background-repeat: no-repeat;
   padding: 60px 0 200px 0;
+  color: #2c3e50;
+
 }
 .contact img {
   width: 92%;
@@ -489,7 +494,7 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   background: rgba(255, 255, 255, 0.1);
   border: 1px solid rgba(255, 255, 255, 0.5);
   border-radius: 20px;
-  color: #fff;
+  color: #454545;
   margin: 0 0 8px 0;
   padding: 18px 26px;
   font-weight: 500;
@@ -504,7 +509,7 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 .contact form input::placeholder, .contact form textarea::placeholder {
   font-size: 16px;
   font-weight: 400;
-  color: #fff;
+  color: #454545;
 }
 .contact form input:focus::placeholder, .contact form textarea:focus::placeholder {
   color: #121212;

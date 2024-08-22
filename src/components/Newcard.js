@@ -91,15 +91,77 @@ const MainDiv=styled.div`
   cursor: pointer;
 
 `
+// Card container for each individual card
+const Card = styled.div`
+  background-color: ${props=>props.color}; /* Light yellowish background */
+  padding: 20px;
+  border-radius: 12px;
+  text-align: center;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  width: 300px;
+  height: 520px;
+  /* width: 100%; */
+  /* max-width: 300px; */
+  /* max-height: 500px; */
+  margin: 10px;
+  @media (min-width: 768px) {
+    width: 90%; /* Adjust width for desktop */
+  }
+`;
+
+// Container for all cards
+const CardContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+
+  @media (min-width: 768px) {
+    flex-direction: row;
+    justify-content: space-around;
+  }
+`;
+
+const CardImage = styled.img`
+  width: 70%;
+  height: auto;
+  margin-bottom: 20px;
+`;
+
+const CardTitle = styled.h3`
+  font-size: 1.5em;
+  color: #333;
+`;
+
+const CardDescription = styled.p`
+  font-size: 1em;
+  color: #666;
+  margin-bottom: 20px;
+  width: 80%;
+`;
+
+const CardLink = styled.a`
+  font-size: 1em;
+  color: #800080; /* Purple color */
+  text-decoration: none;
+
+  &:hover {
+    text-decoration: underline;
+  }
+`;
 const Newcard = (props) => {
   return (
 
     <Col style={{margin:"-2px"}} size={5} sm={6} md={4}>
     <MainDiv>
-    <Manwarp image={props.image}>
-      {/* <Maintext>{props.project.title} </Maintext> */}
-      <Buttonexp>EXPLORE</Buttonexp>
-    </Manwarp>
+    <Card color={props?.project?.background}>
+        <CardImage src={props.image} alt="greytHR Academy" />
+        <CardTitle>{props?.project?.title}</CardTitle>
+        <CardDescription>
+          {props?.project?.description}
+        </CardDescription>
+        <CardLink href="#">Know More</CardLink>
+      </Card>
     </MainDiv>
        </Col>
 

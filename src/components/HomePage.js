@@ -7,16 +7,20 @@ import Pricing from './Pricing'
 import Customerstories from './Customerstories'
 import TrustedCustomer from './loginpage/TrustedCustomer'
 import Resource from './Resource'
+import UnlockFuture from './UnlockFuture'
+import PricingAvtar from './PricingAvtar'
 
 const HomePage = () => {
   return (
     <div>
-    <Banner></Banner>
-    {/* <Resource></Resource> */}
+    {/* <Banner></Banner> */}
+    <Resource></Resource>
     <Skills></Skills>
+    <UnlockFuture></UnlockFuture>
     <Features></Features>
    <TrustedCustomer></TrustedCustomer>
     <Pricing></Pricing>
+    <PricingAvtar></PricingAvtar>
     <Contact></Contact>
     </div>
   )

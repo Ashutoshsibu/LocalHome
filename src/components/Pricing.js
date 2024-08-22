@@ -1,15 +1,15 @@
 import React from "react";
 import styled from "styled-components";
-import colorSharp from "../assets/img/color-sharp.png"
-import colorSharp2 from "../assets/img/color-sharp2.png"
+// import colorSharp from "../assets/img/color-sharp.png"
+// import colorSharp2 from "../assets/img/color-sharp2.png"
 const PricingContainer = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
   padding: 20px;
-  background-image: url(${colorSharp}),url(${colorSharp2});
-  background-position: left center,right top;
-  background-repeat: no-repeat;
+  background-color: #caf0f8;
+  /* background-position: left center,right top;
+  background-repeat: no-repeat; */
   /* background: linear-gradient(90.21deg, #4a2fbd -5.91%, #aa367c 111.58%); */
 `;
 
@@ -17,11 +17,13 @@ const Title = styled.h1`
   font-size: 3.2em;
   margin-bottom: 100px;
   text-align: center;
+  color: #2c3e50;
 `;
 const Title2 = styled.h1`
   font-size: 2em;
   text-align: center;
   margin-bottom: 30px;
+  color: #2c3e50;
 `;
 
 const PlansContainer = styled.div`

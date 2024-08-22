@@ -12,10 +12,10 @@ const TrustedWrap = styled.div`
   }
 `;
 const CustomerTalk = styled.div`
-  background: linear-gradient(90.21deg, #4a2fbd -5.91%, #aa367c 111.58%);
+  background: #f0dbff;
   padding: 20px 55px;
   padding-bottom: 45px;
-  height: 335px;
+  height: 332px;
 
   @media screen and (max-width: 767px){
     height: 390px;
@@ -27,7 +27,7 @@ const Img = styled.img`
 `;
 const CustomTxt = styled.p`
   margin: 0;
-  color: #fff;
+  color: #7f8c8d;
   font-family: Lato;
   font-size: 23px;
   font-style: normal;
@@ -43,7 +43,7 @@ const CustomTxt = styled.p`
   }
 `;
 const CustomDtl = styled.div`
-  background-color: #000;
+  background-color: #ffc8ae;
   padding: 25px 55px;
 
   @media screen and (max-width: 767px){

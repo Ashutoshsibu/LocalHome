@@ -7,8 +7,8 @@ import navIcon1 from "../assets/img/nav-icon1.svg";
 import navIcon2 from "../assets/img/nav-icon2.svg";
 import navIcon3 from "../assets/img/nav-icon3.svg";
 const FooterContainer = styled.footer`
-  //background-color: #0b1f35; /* Dark background color */
-  background-image: url(${Footer});
+ background-color: #0b1f35; /* Dark background color */
+  /* background-image: url(${Footer}); */
   background-position: center center;
   background-size: cover;
   background-repeat: no-repeat;
@@ -105,13 +105,14 @@ const FooterLinks = styled.div`
 `;
 
 const FooterBottom = styled.div`
-  margin-top: 20px;
+  /* margin-top: 20px; */
   font-size: 0.8em;
   text-align: center;
+  background-color: #0b1f35;
 
   @media (min-width: 768px) {
-    margin-top: 250px;
-    text-align: left;
+    /* margin-top: 20px; */
+    text-align: center;
   }
 
   span {
@@ -121,6 +122,7 @@ const FooterBottom = styled.div`
 
 export default function Footer2() {
   return (
+    <>
     <FooterContainer>
       <FooterLeft>
         <img style={{width:"60%"}}  src={logo} alt="Logo" />
@@ -169,7 +171,8 @@ export default function Footer2() {
           </ul>
         </FooterLinks>
       </FooterLinksContainer>
-      <FooterBottom>
+    </FooterContainer>
+    <FooterBottom>
         <p>© 2024 Atomwalk. All Rights Reserved.</p>
         <p>
           Privacy Policy | Terms & Conditions | Made with <span>♥</span> Atomwalk
@@ -180,6 +183,6 @@ export default function Footer2() {
               <a href="#"><img src={navIcon3} alt="Icon" /></a>
             </div>
       </FooterBottom>
-    </FooterContainer>
+      </>
   );
 }
