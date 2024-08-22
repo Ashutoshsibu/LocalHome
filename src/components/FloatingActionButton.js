@@ -8,7 +8,7 @@ const FloatingButton = styled.a`
   right: 20px;
   width: 60px;
   height: 60px;
-  background-color: rgb(40 23 58); /* Background color, can be changed */
+  background-color: rgb(227 227 227); /* Background color, can be changed */
   border-radius: 50%;
   box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.2);
   display: flex;

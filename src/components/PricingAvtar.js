@@ -78,7 +78,6 @@ const PricingSection = styled.div`
     left: -84px;
     top: 8px;
     transition: none;
-    cursor: move;
   }
 `;
 

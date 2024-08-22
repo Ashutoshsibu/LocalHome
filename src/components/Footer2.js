@@ -7,7 +7,7 @@ import navIcon1 from "../assets/img/nav-icon1.svg";
 import navIcon2 from "../assets/img/nav-icon2.svg";
 import navIcon3 from "../assets/img/nav-icon3.svg";
 const FooterContainer = styled.footer`
- background-color: #0b1f35; /* Dark background color */
+ background-color: rgb(13, 11, 62); /* Dark background color */
   /* background-image: url(${Footer}); */
   background-position: center center;
   background-size: cover;
@@ -59,6 +59,7 @@ const ContactInfo = styled.div`
     border-radius: 5px;
     font-size: 1.1em;
     font-weight: 500;
+    cursor:pointer;     
   }
 `;
 
@@ -108,7 +109,7 @@ const FooterBottom = styled.div`
   /* margin-top: 20px; */
   font-size: 0.8em;
   text-align: center;
-  background-color: #0b1f35;
+  background-color: rgb(13, 11, 62);
 
   @media (min-width: 768px) {
     /* margin-top: 20px; */
@@ -119,20 +120,147 @@ const FooterBottom = styled.div`
     color: #55e6a5;
   }
 `;
+// Main Container
+const NewsletterContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: rgb(13, 11, 62);
+  padding: 20px;
+  color: white;
+
+  @media (min-width: 768px) {
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 40px;
+  }
+`;
+
+// Logo Container
+const LogoContainer = styled.div`
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+
+  @media (min-width: 768px) {
+    margin-bottom: 0;
+  }
+
+  img {
+    height: 100px;
+    margin-right: 15px;
+  }
+`;
+
+// Text Container
+const TextContainer = styled.div`
+  font-size: 1.2em;
+  text-align: center;
+  margin-bottom: 20px;
+
+  @media (min-width: 768px) {
+    text-align: left;
+    margin-bottom: 0;
+    max-width: 209px;
+  }
+`;
+
+// Form Container
+const FormContainer = styled.form`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  @media (min-width: 768px) {
+    flex-direction: row;
+    align-items: center;
+  }
+`;
+
+// Input Field
+const InputField = styled.input`
+  padding: 10px;
+  border: 2px solid #ccc;
+  border-radius: 5px;
+  margin-bottom: 10px;
+  width: 80%;
+  max-width: 300px;
+  
+  @media (min-width: 768px) {
+    margin-bottom: 0;
+    margin-right: 10px;
+    width: 250px;
+  }
+`;
+
+// Submit Button
+const SubmitButton = styled.button`
+  padding: 10px 20px;
+  background-color: #ea5c49;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 1em;
+  cursor: pointer;
+
+  &:hover {
+    background-color: #d04b38;
+  }
+`;
+
+// Disclaimer Text
+const DisclaimerText = styled.p`
+  margin-top: 10px;
+  font-size: 0.8em;
+  color: #ccc;
+  text-align: center;
+
+  @media (min-width: 768px) {
+    text-align: left;
+    margin-top: 0;
+  }
+
+  a {
+    color: #ccc;
+    text-decoration: underline;
+
+    &:hover {
+      color: white;
+    }
+  }
+`;
 
 export default function Footer2() {
   return (
     <>
+    
     <FooterContainer>
       <FooterLeft>
-        <img style={{width:"60%"}}  src={logo} alt="Logo" />
-        <h1>Get Ready to Grow Your Business</h1>
-      </FooterLeft>
+      <NewsletterContainer>
+      <LogoContainer>
+        <img src={logo} alt="AtomWalk Logo" />
+      </LogoContainer>
+      
+      <TextContainer>
+        Stay up-to-date with AtomWalk Newsletter!
+      </TextContainer>
+      
+      <FormContainer>
+        <InputField type="email" placeholder="Email*" required />
+        <SubmitButton type="submit">Submit</SubmitButton>
+      </FormContainer>
 
-      <ContactInfo>
+    </NewsletterContainer>
+    <ContactInfo>
         <div>info@atomwalk.com</div>
         <div>+91-7259555003</div>
       </ContactInfo>
+    {/* <DisclaimerText>
+        By providing your information, you hereby consent to the AtomWalk <a href="#">Cookie Policy</a> and <a href="#">Privacy Policy</a>.
+      </DisclaimerText> */}
+      </FooterLeft>
+
+
 
       <FooterLinksContainer>
         <FooterLinks>
@@ -142,7 +270,7 @@ export default function Footer2() {
               <a href="#home">Home</a>
             </li>
             <li>
-              <a href="#about">About Us</a>
+              <a href="/aboutUs.html">About Us</a>
             </li>
             <li>
               <a href="#services">Services</a>
@@ -170,9 +298,27 @@ export default function Footer2() {
             </li>
           </ul>
         </FooterLinks>
+        <FooterLinks>
+          <h3>Resources</h3>
+          <ul>
+            <li>
+              <a href="#webdev">Blog</a>
+            </li>
+            <li>
+              <a href="#appdev">Support</a>
+            </li>
+            <li>
+              <a href="#maintenance">Tutorials</a>
+            </li>
+            <li>
+              <a href="#marketing">FAQs</a>
+            </li>
+          </ul>
+        </FooterLinks>
       </FooterLinksContainer>
     </FooterContainer>
     <FooterBottom>
+      <div style={{padding:"25px"}}>
         <p>© 2024 Atomwalk. All Rights Reserved.</p>
         <p>
           Privacy Policy | Terms & Conditions | Made with <span>♥</span> Atomwalk
@@ -181,6 +327,7 @@ export default function Footer2() {
               <a href="#"><img src={navIcon1} alt="Icon" /></a>
               <a href="#"><img src={navIcon2} alt="Icon" /></a>
               <a href="#"><img src={navIcon3} alt="Icon" /></a>
+            </div>
             </div>
       </FooterBottom>
       </>

@@ -23,7 +23,7 @@ const MainTitle = styled.h1`
   margin-bottom: 10px;
 
   @media (min-width: 768px) {
-    font-size: 48px;
+    font-size: 45px;
   }
 `;
 

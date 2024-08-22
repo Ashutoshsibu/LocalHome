@@ -28,7 +28,7 @@ margin-top: 40px;
   margin-bottom: 40px;
 
   @media (min-width: 768px) {
-    font-size: 36px;
+    font-size: 45px;
   }
 `;
 

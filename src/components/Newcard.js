@@ -144,6 +144,7 @@ const CardLink = styled.a`
   font-size: 1em;
   color: #800080; /* Purple color */
   text-decoration: none;
+  font-weight: 500;
 
   &:hover {
     text-decoration: underline;
