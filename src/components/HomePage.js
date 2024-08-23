@@ -9,6 +9,7 @@ import TrustedCustomer from './loginpage/TrustedCustomer'
 import Resource from './Resource'
 import UnlockFuture from './UnlockFuture'
 import PricingAvtar from './PricingAvtar'
+import Testimonial from './Testimonial'
 
 const HomePage = () => {
   return (
@@ -19,6 +20,7 @@ const HomePage = () => {
     <UnlockFuture></UnlockFuture>
     <Features></Features>
    <TrustedCustomer></TrustedCustomer>
+   <Testimonial></Testimonial>
     <Pricing></Pricing>
     <PricingAvtar></PricingAvtar>
     <Contact></Contact>

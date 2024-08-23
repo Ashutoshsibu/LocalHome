@@ -1,12 +1,26 @@
 import Spline from '@splinetool/react-spline';
+import styled from 'styled-components';
+import Backimag from './../assets/img/background.jpg'
+const MainWraper=styled.div`
+/* background-image:url(${Backimag}) ;
+ */
+background-color: rgb(227 227 227);
+background-position: center center;
+background-size: cover;
+  background-repeat: no-repeat;
+  @media(min-width: 768px) {
+    width: 1920px;
+    height: 950px;
+  }
+`
 
 export default function Resource() {
   return (
-  <div style={{width:"100%",height:"100%" ,backgroundColor:"#e3e3e3"}}>
+ <MainWraper>
       <Spline
         scene= "https://prod.spline.design/A-83MDwDe-nnDmxX/scene.splinecode"
       />
-    </div>
+      </MainWraper>
   );
 }
 

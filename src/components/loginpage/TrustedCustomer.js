@@ -134,12 +134,12 @@ export default function TrustedCustomer() {
         </div>
         <GripWrap>
           <CustomerLogo>
-            {/* <Img src={KanekaLogo} style={{ width: "130px" }} />
-            <Img src={Nissay} />
-            <Img src={Bridgestone} />
-            <Img src={Gsk} />
-            <Img src={unilever} />
-            <Img src={Beiersdorf} style={{ width: "133px" }} />
+            {/* <Img src="https://picsum.photos/103/103" style={{ width: "130px" }} />
+            <Img src="https://picsum.photos/102/102"  />
+            <Img src="https://picsum.photos/103/103" />
+            <Img src="https://picsum.photos/103/103" />
+            <Img src="https://picsum.photos/103/103" /> */}
+            {/* <Img src="https://picsum.photos/103/103" />
             <Img src={Nec} style={{ width: "133px" }} />
             <Img src={Cocacola} style={{ width: "118px" }} />
             <Img src={SumitomoImg} />
