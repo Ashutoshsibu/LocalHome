@@ -95,7 +95,7 @@ const PricingDescription = styled.p`
 
 // Button styles
 const Button = styled.a`
-  background-color: #6a0dad;
+  background-color: #ea5c49;
   color: #fff;
   padding: 10px 20px;
   border-radius: 25px;
@@ -105,7 +105,7 @@ const Button = styled.a`
   display: inline-block;
 
   &:hover {
-    background-color: #280043;
+    background-color: #ee442d;
   }
 
   &.secondary {

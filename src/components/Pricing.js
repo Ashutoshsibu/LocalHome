@@ -91,7 +91,7 @@ const Message = styled.p`
 `;
 
 const Button = styled.button`
-  background-color: #6a0dad;
+  background-color: #ea5c49;
   color: white;
   border: none;
   border-radius: 5px;
@@ -101,7 +101,7 @@ const Button = styled.button`
   margin-top: 20px;
 
   &:hover {
-    background-color: #500b86;
+    background-color: #ee442d;
   }
 `;
 
