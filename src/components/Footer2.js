@@ -1,6 +1,8 @@
 import React from "react";
 import styled from "styled-components";
 import logo from "../assets/img/Atom_walk_logo-removebg-preview.png";
+import Email from "../assets/img/email.png";
+import Phone from "../assets/img/telephone-call.png";
 // import Footer from "../assets/img/Footer-1.jpg";
 import Footer from "../assets/img/footer-bg.png";
 import navIcon1 from "../assets/img/nav-icon1.svg";
@@ -59,8 +61,13 @@ const ContactInfo = styled.div`
     border-radius: 5px;
     font-size: 1.1em;
     font-weight: 500;
-    cursor:pointer;     
+    cursor:pointer;
+    display:flex ;
   }
+img{
+  width: 20px;
+  margin-right: 10px;
+}
 `;
 
 const FooterLinksContainer = styled.div`
@@ -132,7 +139,7 @@ const NewsletterContainer = styled.div`
   @media (min-width: 768px) {
     flex-direction: row;
     justify-content: space-between;
-    padding: 40px;
+    /* padding: 40px; */
   }
 `;
 
@@ -144,11 +151,13 @@ const LogoContainer = styled.div`
 
   @media (min-width: 768px) {
     margin-bottom: 0;
+    display: none;
   }
 
   img {
-    height: 100px;
+    /* height: 100px; */
     margin-right: 15px;
+    width: 150px;
   }
 `;
 
@@ -252,8 +261,8 @@ export default function Footer2() {
 
     </NewsletterContainer>
     <ContactInfo>
-        <div>info@atomwalk.com</div>
-        <div>+91-7259555003</div>
+        <div> <img src={Email} alt="AtomWalk Logo" />info@atomwalk.com</div>
+        <div><img src={Phone} alt="AtomWalk Logo" />+91-7259555003</div>
       </ContactInfo>
     {/* <DisclaimerText>
         By providing your information, you hereby consent to the AtomWalk <a href="#">Cookie Policy</a> and <a href="#">Privacy Policy</a>.
