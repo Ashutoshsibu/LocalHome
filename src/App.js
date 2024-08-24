@@ -16,6 +16,7 @@ import FloatingActionButton from "./components/FloatingActionButton";
 import { useEffect, useState } from "react";
 import ProductDemoModal from "./components/ProductDemoModal";
 import Resource from "./components/Resource";
+import FormComponent from "./components/FormComponent";
 
 function App() {
   const[openslide,setOpenslide]=useState(false)
@@ -46,6 +47,7 @@ useEffect(()=>{
           <Route path="/contactUs.html" element={<ContactUs />} />
           <Route path="/aboutUs.html" element={<AbotUs />} />
           <Route path="/askme.html" element={<Resource />} />
+          <Route path="/demo.html" element={<FormComponent />} />
         </Routes>
       </Router>
       {openslide&&<Askme setOpenslide={setOpenslide}/>}
