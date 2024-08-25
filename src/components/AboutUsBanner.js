@@ -12,7 +12,6 @@ const AboutWrap = styled.div`
     height: 1850px;
     padding-top: 74px;
     background-size: cover;
-    opacity: 0.8;
 
     @media screen and (max-width: 767px) {
         height: 1450px;
@@ -21,17 +20,17 @@ const AboutWrap = styled.div`
 `
 const AboutTxt = styled.div`
     position: absolute;
-    top: 15%;
+    top: 8%;
     left: 50%;
     transform: translate(-50%, -50%);
     margin-top: 50px;
 
     @media  screen and (max-width: 1280px){
-        margin-top: 10%;
+        margin-top: 3%;
     }
     @media screen and (max-width: 767px) {
-        margin: 0 auto;
-        margin-top: 50px;
+        /* margin: 0 auto; */
+        margin-top: -150px;
         width: 370px;
     }
 

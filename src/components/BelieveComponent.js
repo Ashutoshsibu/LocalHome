@@ -1,18 +1,21 @@
 import React from 'react';
 import styled from 'styled-components';
-
+import People from './../assets/img/people.png'
+import Hand from './../assets/img/handshake.png'
+import Rocket from './../assets/img/startup.png'
+import Handsek from './../assets/img/hand-shake.png'
 // Styled Components
 
 const Container = styled.div`
   background-color: #fff7e6; // Light cream background
-  padding: 50px 20px;
+  padding: 100px 20px;
 `;
 
 const Title = styled.h2`
   text-align: center;
   font-size: 2rem;
   color: #333333;
-  margin-bottom: 40px;
+  margin-bottom: 100px;
 `;
 
 const CardsContainer = styled.div`
@@ -38,7 +41,8 @@ const Card = styled.div`
   text-align: center;
 
   @media(min-width: 768px) {
-    max-width: 250px;
+    max-width: 400px;
+    height: 150px;
   }
 `;
 
@@ -48,6 +52,7 @@ const IconWrapper = styled.div`
   padding: 10px;
   display: inline-block;
   margin-right: 15px;
+  width: 50px;
 `;
 
 const Text = styled.p`
@@ -63,25 +68,25 @@ const BelieveComponent = () => {
       <CardsContainer>
         <Card>
           <IconWrapper color="#8ed1b0">
-            <i className="fas fa-users"></i> {/* Use your own icon here */}
+          <img  src={People}></img>
           </IconWrapper>
           <Text>That business is first and foremost about people</Text>
         </Card>
         <Card>
           <IconWrapper color="#db70d1">
-            <i className="fas fa-heart"></i> {/* Use your own icon here */}
+          <img  src={Hand}></img>
           </IconWrapper>
           <Text>That we can truly change the world</Text>
         </Card>
         <Card>
           <IconWrapper color="#fbbd3c">
-            <i className="fas fa-rocket"></i> {/* Use your own icon here */}
+          <img  src={Rocket}></img>
           </IconWrapper>
           <Text>That relentless innovation is a way to be, not a choice</Text>
         </Card>
         <Card>
-          <IconWrapper color="#6cd5ff">
-            <i className="fas fa-handshake"></i> {/* Use your own icon here */}
+          <IconWrapper style={{width:"65px"}}color="#6cd5ff">
+           <img  src={Handsek}></img>
           </IconWrapper>
           <Text>That human connections and partnerships help break boundaries and help raise the bar</Text>
         </Card>

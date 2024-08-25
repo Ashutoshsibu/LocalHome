@@ -1,5 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
+import Team from './../assets/img/TemIcon.jpg'
+import Linkind from './../assets/img/linkedin.png'
 
 // Styled Components
 
@@ -69,7 +71,7 @@ const InfoOverlay = styled.div`
   background: linear-gradient(to top, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0));
   color: #ffffff;
   padding: 20px;
-  opacity: 0;
+  opacity: 1;
   transition: opacity 0.3s ease-in-out;
 `;
 
@@ -97,7 +99,7 @@ const LinkedInIcon = styled.a`
   margin-top: 10px;
   color: #0077b5;
   font-size: 1.5rem;
-
+width: 8%;
   &:hover {
     color: #005582;
   }
@@ -112,16 +114,16 @@ const LeadershipTeam = () => {
       <TeamContainer>
         <Card>
           <ImageWrapper>
-            <Image src="path_to_image_1.jpg" alt="Girish Rowjee" />
+            <Image src={Team} alt="Manoj" />
           </ImageWrapper>
           <InfoOverlay className="infoOverlay">
-            <Name>Girish Rowjee</Name>
+            <Name>Manoj Kumar Sahoo</Name>
             <Role>Co-Founder & CEO</Role>
-            <LinkedInIcon href="https://www.linkedin.com/in/girishrowjee" target="_blank">
-              <i className="fab fa-linkedin"></i>
+            <LinkedInIcon href="https://www.linkedin.com/in/manojksahoo" target="_blank">
+             <img src={Linkind}></img>
             </LinkedInIcon>
             <Description>
-              Girish Rowjee is a co-founder & CEO of Greytip Software. Girish has guided Greytip into the position of a premier HR & Payroll solutions provider...
+            Manoj Kumar Sahoo is a co-founder & CEO of Atomwalk Software. Manoj has guided Atomwalk into the position of a premier HR & Payroll solutions provider...
             </Description>
           </InfoOverlay>
         </Card>
@@ -133,7 +135,7 @@ const LeadershipTeam = () => {
             <Name>Sayeed Anjum</Name>
             <Role>Co-Founder & CTO</Role>
             <LinkedInIcon href="https://www.linkedin.com/in/sayeedanjum" target="_blank">
-              <i className="fab fa-linkedin"></i>
+            <img src={Linkind}></img>
             </LinkedInIcon>
             <Description>
               Sayeed Anjum is a co-founder of Greytip Software. He is focused on improving the product development process and oversees all aspects of...
@@ -148,7 +150,7 @@ const LeadershipTeam = () => {
             <Name>Mohammed Azhar</Name>
             <Role>Chief Sales Officer</Role>
             <LinkedInIcon href="https://www.linkedin.com/in/mohammedazhar" target="_blank">
-              <i className="fab fa-linkedin"></i>
+            <img src={Linkind}></img>
             </LinkedInIcon>
             <Description>
               Mohammed Azhar has been an integral part of Greytip since 1998. He oversees the strategy, model and operations of sales resources...
@@ -163,7 +165,7 @@ const LeadershipTeam = () => {
             <Name>Krishna Prasad</Name>
             <Role>Chief Product Officer</Role>
             <LinkedInIcon href="https://www.linkedin.com/in/krishnaprasad" target="_blank">
-              <i className="fab fa-linkedin"></i>
+            <img src={Linkind}></img>
             </LinkedInIcon>
             <Description>
               Krishna Prasad scaled dramatically from an intern to Product Head in his 19 years with Greytip. His hard work, resolve, and knowledge of the technical...

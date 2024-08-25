@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+import Team from './../assets/img/TeamImg.png'
 
 // Styled Components
 
@@ -88,7 +89,7 @@ const PurposeComponent = () => {
       </HeaderSection>
       <ContentSection>
         <ImageWrapper>
-          <Image src="path_to_your_image.png" alt="Team of Entrepreneurs" />
+          <Image src={Team} alt="Team of Entrepreneurs" />
         </ImageWrapper>
         <TextContent>
           <SectionTitle>How We Do It</SectionTitle>
