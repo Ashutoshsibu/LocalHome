@@ -6,6 +6,8 @@ import colorSharp from "../assets/img/color-sharp.png";
 import colorSharp2 from "../assets/img/color-sharp2.png";
 import manufacturing from "../assets/img/manufacturing-erp-solutions.png";
 import manufacturing2 from "../assets/img/manufacturing-erp-software-implement.webp";
+import LetsConnect from './LetsConnect';
+import ProductPage from './ProductPage';
 
 // Styled components
 const PageContainer = styled.div`
@@ -184,14 +186,129 @@ const Tesdiv = styled.div`
     font-size: 2em;
   }
 `;
+const Container = styled.div`
+  padding: 20px;
+  background-color: #f4f4f4;
+`;
+
+const Section = styled.section`
+  background: #fff;
+  margin: 20px 0;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+`;
+
+const Title = styled.h1`
+  font-size: 2em;
+  color: #333;
+  text-align: center;
+`;
+
+const SubTitle = styled.h2`
+  font-size: 1.5em;
+  color: #555;
+  margin-bottom: 10px;
+`;
+
+const Content = styled.p`
+  font-size: 1em;
+  color: #666;
+  line-height: 1.6;
+`;
+
+const FeaturesList = styled.ul`
+  list-style-type: none;
+  padding: 0;
+  margin: 20px 0;
+`;
+
+const FeatureItem = styled.li`
+  font-size: 1em;
+  color: #444;
+  margin: 10px 0;
+`;
+
+const ContactSection = styled.div`
+  background: #ffebcc;
+  padding: 20px;
+  border-radius: 8px;
+  text-align: center;
+  margin: 20px 0;
+`;
+
+const Button = styled.button`
+  background: #333;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  margin-top: 20px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 1em;
+
+  &:hover {
+    background: #555;
+  }
+`;
 
 // Main Component
 const Product = () => {
   return (
     <>
-      <BackImage>
-        <Tesdiv></Tesdiv>
-      </BackImage>
+  <LetsConnect title={"Empower Your Business with Atomwalk Office ERP"}
+   description={" Atomwalk Office is a cloud-based ERP solution, designed to transform the way startups, small, and medium-sized businesses operate. Built on cutting-edge technologies like AI and Blockchain, our platform seamlessly manages core business functions including manufacturing, purchasing, inventory, sales, customer service, accounting, and HR."} 
+   background={"#52ebff"}
+   data={true}></LetsConnect>
+   <ProductPage></ProductPage>
+  <Container>
+      <Section>
+        <Title>Empower Your Business with Atomwalk Office ERP</Title>
+        <Content>
+          Atomwalk Office is a cloud-based ERP solution, designed to transform the way startups, small, and medium-sized businesses operate. Built on cutting-edge technologies like AI and Blockchain, our platform seamlessly manages core business functions including manufacturing, purchasing, inventory, sales, customer service, accounting, and HR.
+        </Content>
+      </Section>
+
+      <Section>
+        <SubTitle>Why Choose Atomwalk?</SubTitle>
+        <Content>
+          Atomwalk Office is more than just an ERP; it’s a comprehensive solution that automates and optimizes your entire business operation. Our platform offers:
+        </Content>
+        <FeaturesList>
+          <FeatureItem>Financial Compliance: Automated e-Invoice, GST reconciliation, and real-time financial management.</FeatureItem>
+          <FeatureItem>Operational Excellence: Project and work order management, BOM generation, and process optimization.</FeatureItem>
+          <FeatureItem>Business Growth: Integrated CRM for lead management, sales performance tracking, and customer communication.</FeatureItem>
+          <FeatureItem>HR & Payroll: From recruitment to payroll, manage the full employee lifecycle effortlessly.</FeatureItem>
+          <FeatureItem>Multi-location Flexibility: Handle operations across multiple branches or locations with ease.</FeatureItem>
+        </FeaturesList>
+      </Section>
+
+      <Section>
+        <SubTitle>Key Features</SubTitle>
+        <Content>
+          Features Tailored to Your Business Needs:
+        </Content>
+        <FeaturesList>
+          <FeatureItem>Manufacturing ERP: Streamline production with BOM planning, inventory management, and supplier coordination.</FeatureItem>
+          <FeatureItem>Process Manufacturing: Recipe management, batch tracking, and operational efficiency tools.</FeatureItem>
+          <FeatureItem>Consultancy & Services: Efficient project management, CRM integration, and financial oversight.</FeatureItem>
+          <FeatureItem>Lab Management: Comprehensive tools for managing lab equipment, R&D, and documentation.</FeatureItem>
+        </FeaturesList>
+      </Section>
+
+      <Section>
+        <SubTitle>Contact Us</SubTitle>
+        <Content>
+          Ready to transform your business? Let’s connect and discuss how Atomwalk Office can drive your business forward.
+        </Content>
+        <ContactSection>
+          <p>Email: info@atomwalk.com</p>
+          <p>Phone: +91 72595 55003</p>
+          <p>Address: CRM SOWBHAGYA ANNEX, SyNo. 35/1B, Varthur Main Road, Marathahalli, Bengaluru, Karnataka 560037</p>
+          <Button>Get Started with Atomwalk Office ERP</Button>
+        </ContactSection>
+      </Section>
+    </Container>
       <PageContainer>
         <Header>Manufacturing ERP Solutions</Header>
         <ContentSection>

@@ -1,11 +1,12 @@
 import React from 'react';
 import styled from 'styled-components';
 import People  from './../assets/img/Backgroundpeople.png'
+import product  from './../assets/img/Product.png'
 
 // Styled Components
 
 const Section = styled.section`
-  background-color: #ffc24b;
+  background-color:${(props=>props.background)};
 ;
   /* border-radius: 20px; */
   display: flex;
@@ -23,7 +24,7 @@ const Section = styled.section`
 `;
 
 const TextContainer = styled.div`
-  max-width: 500px;
+  max-width: 700px;
 `;
 
 const Title = styled.h2`
@@ -74,16 +75,16 @@ const PeopleImage = styled.img`
 `;
 
 // Component
-const LetsConnect = () => {
+const LetsConnect = (props) => {
   return (
-    <Section>
+    <Section background={props.background}>
       <TextContainer>
-        <Title>Let's connect</Title>
-        <Description>We would love to hear from you. How can we help?</Description>
+        <Title>{props.title}</Title>
+        <Description>{props.description}</Description>
       </TextContainer>
       <ImageContainer>
-        <Circle />
-        <PeopleImage src={People} alt="People talking" />
+        {!props.data&&<Circle />}
+        <PeopleImage src={props.data?product:People} alt="People talking" />
       </ImageContainer>
     </Section>
   );

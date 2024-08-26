@@ -154,7 +154,7 @@ const ContactUs = () => {
   return (
     <>
     {/* <BackImage><Tesdiv>Contact Us</Tesdiv></BackImage> */}
-    <LetsConnect></LetsConnect>
+    <LetsConnect title={"Let's connect"} description={"We would love to hear from you. How can we help?"} background={"#ffc24b"}></LetsConnect>
     <ContactCards></ContactCards>
     <ContactSection>
       <ContactDetails>

@@ -33,7 +33,7 @@ const Header = styled.div`
 `;
 
 const HeadBox = styled.div`
-  height: 110%;
+  height: 125%;
   width: 100%;
   background-color: #96ddbc;
   padding: 90px;
@@ -139,7 +139,10 @@ const PlanArea = styled.div`
   line-height: 26px;
   margin: 144px 0px;
   width: 100%;
-  margin-top: 100px;
+  margin-top: 180px;
+  @media (max-width:768px) {
+    margin-top: 70px;
+  }
 `;
 
 const TitleOne = styled.h2`
