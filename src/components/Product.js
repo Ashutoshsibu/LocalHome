@@ -8,6 +8,7 @@ import manufacturing from "../assets/img/manufacturing-erp-solutions.png";
 import manufacturing2 from "../assets/img/manufacturing-erp-software-implement.webp";
 import LetsConnect from './LetsConnect';
 import ProductPage from './ProductPage';
+import PlanSuccess from './PlanSuccess';
 
 // Styled components
 const PageContainer = styled.div`
@@ -261,6 +262,7 @@ const Product = () => {
    background={"#52ebff"}
    data={true}></LetsConnect>
    <ProductPage></ProductPage>
+   <PlanSuccess></PlanSuccess>
   <Container>
       <Section>
         <Title>Empower Your Business with Atomwalk Office ERP</Title>
