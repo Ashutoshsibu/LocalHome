@@ -2,17 +2,19 @@ import React from 'react';
 import styled from 'styled-components';
 import contactus from "../assets/img/contactus.jpg";
 import colorSharp from "../assets/img/color-sharp.png"
+import LetsConnect from './LetsConnect';
+import ContactCards from './ContactCards';
 
 const ContactSection = styled.section`
   display: flex;
   flex-direction: column;
   align-items: center;
-  background-image: url(${colorSharp});
+  /* background-image: url(${colorSharp});
   background-position: left center;
-  background-repeat: no-repeat;
-  /* background-color: #02050a; */
+  background-repeat: no-repeat; */
+  background-color: #e1fff6;
   padding: 50px 20px;
-  color: white;
+  color: #333;
 
   @media(min-width: 768px) {
     flex-direction: row;
@@ -49,14 +51,14 @@ const Address = styled.div`
 
 const ContactForm = styled.form`
   flex: 1;
-  background-color: #1f1f1f;
+  background-color: #dffddb;
   padding: 30px;
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
   &:hover{
   transform: scale(1.05);
-  box-shadow: 0 4px 57px -9px #9553ba;
+  box-shadow: 0 4px 57px -9px #454545;
   }
 `;
 
@@ -70,10 +72,11 @@ const Input = styled.input`
   width: 100%;
   padding: 10px;
   margin: 10px 0;
-  background-color: #292929;
-  border: none;
+  /* background-color: #f6eaff; */
+  border: 1px solid #333;
+  /* border: none; */
   border-radius: 5px;
-  color: white;
+  color: #333;
   font-size: 1em;
 `;
 
@@ -81,10 +84,11 @@ const TextArea = styled.textarea`
   width: 100%;
   padding: 10px;
   margin: 10px 0;
-  background-color: #292929;
-  border: none;
+  /* background-color: #f6eaff; */
+  border: 1px solid #333;
+  /* border: none; */
   border-radius: 5px;
-  color: white;
+  color:  #333;
   font-size: 1em;
   height: 100px;
 `;
@@ -92,17 +96,19 @@ const TextArea = styled.textarea`
 const Button = styled.button`
   width: 100%;
   padding: 10px;
+  border: 1px solid #333;
   margin-top: 20px;
-  background: linear-gradient(90.21deg, rgba(170, 54, 124, 0.5) -5.91%, rgba(74, 47, 189, 0.5) 111.58%);
-  border: none;
+  /* background: linear-gradient(90.21deg, rgba(170, 54, 124, 0.5) -5.91%, rgba(74, 47, 189, 0.5) 111.58%); */
+  background-color: rgb(223, 253, 219);
+  /* border: none; */
   border-radius: 5px;
-  color: white;
+  color: #333;
   font-size: 1em;
   font-weight:500;
   cursor: pointer;
 
   &:hover {
-    background-color: white;
+    background-color: rgb(223, 253, 245);
   }
 `;
 const BackImage = styled.div`
@@ -138,18 +144,24 @@ const Tesdiv = styled.div`
   z-index: 2; /* Ensure the text is above the background */
   font-weight: 500;
 `;
-
+const Para =styled.p`
+@media (min-width:768px) {
+  width: 440px;
+}
+`
 
 const ContactUs = () => {
   return (
     <>
-    <BackImage><Tesdiv>Contact Us</Tesdiv></BackImage>
+    {/* <BackImage><Tesdiv>Contact Us</Tesdiv></BackImage> */}
+    <LetsConnect></LetsConnect>
+    <ContactCards></ContactCards>
     <ContactSection>
       <ContactDetails>
         <Title>Get in Touch with Atomwalk 👋</Title>
-        <p style={{width:"440px"}}>
+        <Para>
           Feel free to connect with us for any of your needs regarding our services. Our support team is ready to solve any of your issues. Just push a text to us and we will get back to you immediately.
-        </p>
+        </Para>
         <Address>
           <p><strong>India</strong></p>
           <p>Bengaluru, Marathahalli, 560037</p>

@@ -6,7 +6,8 @@ import Linkind from './../assets/img/linkedin.png'
 // Styled Components
 
 const Section = styled.section`
-  padding: 40px 20px;
+  padding: 90px 20px;
+  padding-bottom:110px;
   background-color: #ffffff;
 `;
 
@@ -14,7 +15,7 @@ const Title = styled.h2`
   text-align: center;
   font-size: 2rem;
   color: #333333;
-  margin-bottom: 40px;
+  margin-bottom: 70px;
 `;
 
 const TeamContainer = styled.div`

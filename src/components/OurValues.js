@@ -1,5 +1,10 @@
 import React from 'react';
 import styled from 'styled-components';
+import Like from './../assets/img/like.png'
+import Sale from './../assets/img/sales.png'
+import Focus from './../assets/img/concentrate.png'
+import Gole from './../assets/img/goal.png'
+import Learn from './../assets/img/online-learning.png'
 
 // Styled Components
 
@@ -73,11 +78,11 @@ const ValueDescription = styled.p`
 
 // Sample icons (replace with actual paths)
 const icons = {
-  improve: "path_to_improve_icon.png",
-  excellence: "path_to_excellence_icon.png",
-  impact: "path_to_impact_icon.png",
-  customerSuccess: "path_to_customer_success_icon.png",
-  learning: "path_to_learning_icon.png",
+  improve: `${Sale}`,
+  excellence: `${Like}`,
+  impact: `${Focus}`,
+  customerSuccess: `${Gole}`,
+  learning: `${Learn}`,
 };
 
 const values = [
@@ -97,7 +102,7 @@ const values = [
     title: "Focus on Impact",
     description: "As a business, the impact we create for our customers and solving their problems is our Chief Key Performance Indicator.",
     icon: icons.impact,
-    bgColor: "#e7c7ff",
+    bgColor: "#f5efb8",
   },
   {
     title: "Drive Customer Success",

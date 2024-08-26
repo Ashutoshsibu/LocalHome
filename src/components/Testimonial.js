@@ -58,7 +58,7 @@ const TestimonialCard = styled.div`
   padding: 20px;
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  height: 600px;
+  height: 350px;
   @media (min-width: 768px) {
     flex-direction: row;
     text-align: left;
@@ -114,6 +114,15 @@ const settings = {
   slidesToScroll: 1,
   autoplay: true,
   autoplaySpeed: 3000,
+  responsive: [
+    {
+      breakpoint: 768, // Mobile breakpoint
+      settings: {
+        slidesToShow: 1,
+        slidesToScroll: 1,
+      },
+    },
+  ],
 };
 const ContentWrapper = styled.div`
   max-width: 600px;
