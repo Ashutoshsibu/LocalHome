@@ -15,6 +15,9 @@ const Container = styled.div`
   margin: auto;
   text-align: center;
   background-color: #f5e9fd;
+  @media (max-width: 768px) {
+    padding: 100px 30px;
+  }
 `;
 
 const Title = styled.h2`
@@ -23,7 +26,7 @@ const Title = styled.h2`
   color:#333;
   margin-bottom: 10px;
   @media (max-width: 768px) {
-    font-size: 1.5em;
+    font-size: 2.5em;
   }
 `;
 
@@ -53,7 +56,7 @@ const Feature = styled.div`
   width: 30%;
   margin: 10px;
   padding: 20px;
-  background-color: #f0f4f8;
+  /* background-color: #f0f4f8; */
   border-radius: 10px;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 

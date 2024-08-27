@@ -9,6 +9,8 @@ import manufacturing2 from "../assets/img/manufacturing-erp-software-implement.w
 import LetsConnect from './LetsConnect';
 import ProductPage from './ProductPage';
 import PlanSuccess from './PlanSuccess';
+import SeamlessIntegration from './SeamlessIntegration';
+import TestimonialCardComponent from './TestimonialCardComponent';
 
 // Styled components
 const PageContainer = styled.div`
@@ -263,7 +265,9 @@ const Product = () => {
    data={true}></LetsConnect>
    <ProductPage></ProductPage>
    <PlanSuccess></PlanSuccess>
-  <Container>
+   <SeamlessIntegration></SeamlessIntegration>
+   <TestimonialCardComponent></TestimonialCardComponent>
+  {/* <Container>
       <Section>
         <Title>Empower Your Business with Atomwalk Office ERP</Title>
         <Content>
@@ -310,7 +314,7 @@ const Product = () => {
           <Button>Get Started with Atomwalk Office ERP</Button>
         </ContactSection>
       </Section>
-    </Container>
+    </Container> */}
       <PageContainer>
         <Header>Manufacturing ERP Solutions</Header>
         <ContentSection>

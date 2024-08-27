@@ -11,7 +11,10 @@ background-size: cover;
 background-repeat: no-repeat;
   @media(min-width: 768px) {
     width:${(props=>props.loading? "1920px":"")};
-    height: ${(props=>props.loading? "950px":"")};;
+    height: ${(props=>props.loading? "950px":"")};
+  }
+  @media(max-width: 768px) {
+margin-top: 100px;
   }
 `
 

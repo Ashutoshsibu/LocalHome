@@ -19,7 +19,7 @@ const Section = styled.section`
     flex-direction: row;
     text-align: left;
     height: 600px;
-    padding: 50px 300px
+    padding: 50px 12%
   }
 `;
 
