@@ -28,7 +28,7 @@ function App() {
 useEffect(()=>{
   setTimeout(() => {
     openModal()
-  }, 10000);
+  }, 40000);
 
 },[])
   const closeModal = () => {

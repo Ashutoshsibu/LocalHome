@@ -28,7 +28,7 @@ const Header = styled.div`
   /* Adjustments for mobile devices */
   @media (max-width: 768px) {
     height: auto; /* Allow height to adjust based on content */
-    padding: 20px; /* Add some padding for smaller screens */
+   // padding: 20px; /* Add some padding for smaller screens */
   }
 `;
 
@@ -85,7 +85,7 @@ const HeadTextOne = styled.div`
 
 const HeadPara = styled.p`
   color: #1c1b1f;
-  width: 50%;
+  width: 65%;
   font-size: 21px;
   word-wrap: normal;
   line-height: 31.504px;
