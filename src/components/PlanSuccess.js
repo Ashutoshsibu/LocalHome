@@ -31,7 +31,7 @@ const Title = styled.h2`
 `;
 
 const Subtitle = styled.h3`
-  font-size: 1.5em;
+  font-size: 1.2em;
   color: #666;
   margin-bottom: 80px;
   @media (max-width: 768px) {

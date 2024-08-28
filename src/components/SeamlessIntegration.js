@@ -28,6 +28,7 @@ const Heading = styled.h2`
 const Paragraph = styled.p`
   color: #666;
   margin-top: 10px;
+  font-size: 1.2em;
 `;
 
 const Features = styled.div`
@@ -80,7 +81,7 @@ const SeamlessIntegration = () => {
     <Section>
       <ContentContainer>
         <Heading>Seamless Integration and Workflow</Heading>
-        <Paragraph>Atomwalk Office ERP connects every aspect of your business into one unified system:</Paragraph>
+        <Paragraph>Atomwalk Office ERP connects every aspect of your business into one unified system</Paragraph>
         <Features>
           <FeatureItem style={{backgroundColor:"rgb(181 255 206)"}}>
             <FeatureIcon src={Atomation} alt="Automated Processes" />
