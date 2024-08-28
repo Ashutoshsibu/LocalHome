@@ -225,103 +225,77 @@ const Td = styled.td`
 const PricingRoute = () => {
   const data = useMemo(
     () => [
-      
       {
-        modulePlane: 'Basic',
-        price: 'INR 5000',
-        features: 'Feature A, Feature B',
+        modulePlane: 'Number of Employees',
+        starter: 'Limited',
+        essential: 'Unlimited',
+        growth: 'Unlimited',
+        enterprise: 'Unlimited',
       },
       {
-        modulePlane: 'Standard',
-        price: 'INR 10000',
-        features: 'Feature A, Feature B, Feature C',
+        modulePlane: 'Cost Per Additional Employee',
+        starter: 'Not Applicable',
+        essential: '₹30/ month',
+        growth: '₹60/ month',
+        enterprise: '₹100/ month',
       },
-      {
-        modulePlane: 'Premium',
-        price: 'INR 20000',
-        features: 'Feature A, Feature B, Feature C, Feature D',
-      },
-      {
-        modulePlane: 'Standard',
-        price: 'INR 10000',
-        features: 'Feature A, Feature B, Feature C',
-      },
-      {
-        modulePlane: 'Premium',
-        price: 'INR 20000',
-        features: 'Feature A, Feature B, Feature C, Feature D',
-      },
-      {
-        modulePlane: 'Standard',
-        price: 'INR 10000',
-        features: 'Feature A, Feature B, Feature C',
-      },
-      {
-        modulePlane: 'Premium',
-        price: 'INR 20000',
-        features: 'Feature A, Feature B, Feature C, Feature D',
-      },
-      {
-        modulePlane: 'Standard',
-        price: 'INR 10000',
-        features: 'Feature A, Feature B, Feature C',
-      },
-      {
-        modulePlane: 'Premium',
-        price: 'INR 20000',
-        features: 'Feature A, Feature B, Feature C, Feature D',
-      },
-      {
-        modulePlane: 'Standard',
-        price: 'INR 10000',
-        features: 'Feature A, Feature B, Feature C',
-      },
-      {
-        modulePlane: 'Premium',
-        price: 'INR 20000',
-        features: 'Feature A, Feature B, Feature C, Feature D',
-      },
-      {
-        modulePlane: 'Standard',
-        price: 'INR 10000',
-        features: 'Feature A, Feature B, Feature C',
-      },
-      {
-        modulePlane: 'Premium',
-        price: 'INR 20000',
-        features: 'Feature A, Feature B, Feature C, Feature D',
-      },
-      {
-        modulePlane: 'Standard',
-        price: 'INR 10000',
-        features: 'Feature A, Feature B, Feature C',
-      },
-      {
-        modulePlane: 'Premium',
-        price: 'INR 20000',
-        features: 'Feature A, Feature B, Feature C, Feature D',
-      },
+      // Add more rows as needed
     ],
     []
   );
+  
 
   const columns = useMemo(
     () => [
       {
-        Header: 'Module & Features',
+        Header: 'Modules and Features',
         accessor: 'modulePlane',
       },
       {
-        Header: 'Starter',
-        accessor: 'price',
+        Header: (
+          <>
+            <div>Starter</div>
+            <div>₹ 0 / month</div>
+            <ButtonOne>Start Free Trial</ButtonOne>
+          </>
+        ),
+        accessor: 'starter',
       },
       {
-        Header: 'Essential',
-        accessor: 'features',
+        Header: (
+          <>
+            <div>Essential</div>
+            <div>₹ 3495 / month</div>
+            <button>Start Free Trial</button>
+          </>
+        ),
+        accessor: 'essential',
+      },
+      {
+        Header: (
+          <>
+            <div>Growth</div>
+            <div>₹ 5495 / month</div>
+            <button>Start Free Trial</button>
+          </>
+        ),
+        accessor: 'growth',
+      },
+      {
+        Header: (
+          <>
+            <div>Enterprise</div>
+            <div>₹ 7495 / month</div>
+            <button>Start Free Trial</button>
+          </>
+        ),
+        accessor: 'enterprise',
       },
     ],
     []
   );
+  
+  
 
   const {
     getTableProps,

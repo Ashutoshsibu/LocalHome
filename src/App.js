@@ -17,6 +17,7 @@ import { useEffect, useState } from "react";
 import ProductDemoModal from "./components/ProductDemoModal";
 import FormComponent from "./components/FormComponent";
 import PricingRoute from "./components/PricingRoute";
+import ContactSalesPage from "./components/ContactSalesPage";
 
 function App() {
   const[openslide,setOpenslide]=useState(false)
@@ -48,6 +49,7 @@ useEffect(()=>{
           <Route path="/aboutUs.html" element={<AbotUs />} />
           <Route path="/pricing.html" element={<PricingRoute />} />
           <Route path="/demo.html" element={<FormComponent />} />
+          <Route path="/seals.html" element={<ContactSalesPage />} />
         </Routes>
       </Router>
       {openslide&&<Askme setOpenslide={setOpenslide}/>}

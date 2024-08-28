@@ -40,6 +40,7 @@ const IndustryContainer = styled.div`
   padding: 20px;
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
 
   @media (min-width: 768px) {
     flex-direction: row;
@@ -105,12 +106,15 @@ export const Skills = () => {
   const navigatet=()=>{
     window.location.href="https://www.atomwalk.com/login/"
   }
+  const productnav=()=>{
+    window.location.href="/product.html"
+  }
   return (
     <PageContainer>
       <Title>Streamlining Business Operations</Title>
 
       <Section >
-        <IndustryContainer style={{backgroundColor:"#EDF5FF"}}>
+        <IndustryContainer onClick={productnav} style={{backgroundColor:"#EDF5FF"}}>
           <Image src={Chemical} alt="Chemical Industry" />
           <Content>
             <IndustryTitle>Chemical Industry Small Business</IndustryTitle>
@@ -122,7 +126,7 @@ export const Skills = () => {
       </Section>
 
       <Section>
-        <IndustryContainer style={{backgroundColor:"#E1FFF6"}}>
+        <IndustryContainer onClick={productnav} style={{backgroundColor:"#E1FFF6"}}>
           <Image src={Lab} alt="Lab Management System" />
           <Content>
             <IndustryTitle>Lab Management System</IndustryTitle>
@@ -134,7 +138,7 @@ export const Skills = () => {
       </Section>
 
       <Section>
-        <IndustryContainer style={{backgroundColor:"#F6EAFF"}}>
+        <IndustryContainer  onClick={productnav} style={{backgroundColor:"#F6EAFF"}}>
           <Image src={Mnufacture} alt="Manufacturing Small Business" />
           <Content>
             <IndustryTitle>Manufacturing Small Business</IndustryTitle>
@@ -146,7 +150,7 @@ export const Skills = () => {
       </Section>
 
       <Section>
-        <IndustryContainer style={{backgroundColor:"#FFEADF"}}>
+        <IndustryContainer onClick={productnav} style={{backgroundColor:"#FFEADF"}}>
           <Image src={Consultancy} alt="Consultancy Business" />
           <Content>
             <IndustryTitle>Consultancy Business</IndustryTitle>

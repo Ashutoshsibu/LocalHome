@@ -162,7 +162,7 @@ const Newcard = (props) => {
         <CardDescription>
           {props?.project?.description}
         </CardDescription>
-        <CardLink href="#">Know More</CardLink>
+        <CardLink href="/product.html">Know More</CardLink>
       </Card>
     </MainDiv>
        </Col>

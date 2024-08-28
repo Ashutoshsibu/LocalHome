@@ -11,6 +11,7 @@ import ProductPage from './ProductPage';
 import PlanSuccess from './PlanSuccess';
 import SeamlessIntegration from './SeamlessIntegration';
 import TestimonialCardComponent from './TestimonialCardComponent';
+import ProductCard from './ProductCard';
 
 // Styled components
 const PageContainer = styled.div`
@@ -263,6 +264,7 @@ const Product = () => {
    description={" Atomwalk Office is a cloud-based ERP solution, designed to transform the way startups, small, and medium-sized businesses operate. Built on cutting-edge technologies like AI and Blockchain, our platform seamlessly manages core business functions including manufacturing, purchasing, inventory, sales, customer service, accounting, and HR."} 
    background={"#52ebff"}
    data={true}></LetsConnect>
+   <ProductCard></ProductCard>
    <ProductPage></ProductPage>
    <PlanSuccess></PlanSuccess>
    <SeamlessIntegration></SeamlessIntegration>

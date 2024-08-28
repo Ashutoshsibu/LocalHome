@@ -136,7 +136,7 @@ const PricingAvtar = () => {
     <PricingSection>
       <PricingHeading>Evaluating our pricing? We'll take the price challenge!</PricingHeading>
       <PricingDescription>Our customers endorse we offer exceptional software and service at unchallenged prices. Our costs per license are the lowest in our category.</PricingDescription>
-      <Button href="#">Plans and pricing</Button>
+      <Button href="/pricing.html">Plans and pricing</Button>
       <Button href="/demo.html" className="secondary">Discuss pricing</Button>
     </PricingSection>
   </Section>

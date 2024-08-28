@@ -4,6 +4,7 @@ import contactus from "../assets/img/contactus.jpg";
 import colorSharp from "../assets/img/color-sharp.png"
 import LetsConnect from './LetsConnect';
 import ContactCards from './ContactCards';
+import ContactCard from './ContactCard';
 
 const ContactSection = styled.section`
   display: flex;
@@ -155,6 +156,7 @@ const ContactUs = () => {
     <>
     {/* <BackImage><Tesdiv>Contact Us</Tesdiv></BackImage> */}
     <LetsConnect title={"Let's connect"} description={"We would love to hear from you. How can we help?"} background={"#ffc24b"}></LetsConnect>
+    <ContactCard></ContactCard>
     <ContactCards></ContactCards>
     <ContactSection>
       <ContactDetails>

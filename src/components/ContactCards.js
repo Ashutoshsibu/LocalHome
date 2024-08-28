@@ -1,9 +1,10 @@
-import React from 'react';
+import React, { useState } from 'react';
 import styled from 'styled-components';
 import Sales  from './../assets/img/content.png'
-import Support  from './../assets/img/support.png'
+import Supports  from './../assets/img/support.png'
 import Partnerships  from './../assets/img/hand-shake.png'
 import Media  from './../assets/img/acquisition.png'
+import Support from './Support';
 
 // Styled Components
 const GridContainer = styled.div`
@@ -70,7 +71,21 @@ const Button = styled.button`
 
 // Component
 const ContactCards = () => {
+  const [modalIsOpen, setModalIsOpen] = useState(false);
+  const closeModal = () => {
+    setModalIsOpen(false);
+  };
+  const openModal = () => {
+    setModalIsOpen(true);
+  };
+  const contact = () => {
+  window.location.href='/contactUs.html'
+  };
+  const seals = () => {
+    window.location.href='/seals.html'
+    };
   return (
+    <>
     <GridContainer>
       <Card bgColor="#f6eaff">
         <Icon bgColor="#ffe9c0">
@@ -78,16 +93,16 @@ const ContactCards = () => {
         </Icon>
         <Title>Sales</Title>
         <Description>Explore how Atomwalk can benefit your business.</Description>
-        <Button>Talk To Us</Button>
+        <Button onClick={seals}>Talk To Us</Button>
       </Card>
       
       <Card bgColor="#ffeadf">
         <Icon bgColor="#dff2e1">
-          <img src={Support} alt="Support" />
+          <img src={Supports} alt="Support" />
         </Icon>
         <Title>Support</Title>
         <Description>If you are our customer and need help with the Atomwalk application. We are here for you.</Description>
-        <Button>Get Help</Button>
+        <Button onClick={openModal}>Get Help</Button>
       </Card>
 
       <Card bgColor="#e1fff6">
@@ -105,9 +120,11 @@ const ContactCards = () => {
         </Icon>
         <Title>Media</Title>
         <Description>Any PR related questions? Always ready to talk.</Description>
-        <Button>Contact Us</Button>
+        <Button onClick={contact}>Contact Us</Button>
       </Card>
     </GridContainer>
+    <Support isOpen={modalIsOpen} onRequestClose={closeModal}></Support>
+    </>
   );
 };
 
