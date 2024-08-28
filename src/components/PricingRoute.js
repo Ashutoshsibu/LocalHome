@@ -207,9 +207,9 @@ const Table = styled.table`
 const Th = styled.th`
   background-color: #FCE6FF;
   color: #1c1b1f;
-  padding: 50px;
+  padding: 50px 20px;
   font-size: larger;
-  text-align: left;
+  text-align: center;
   border: 2px solid #8900c4;
   position: sticky;
   top: 0;
@@ -239,12 +239,23 @@ const PricingRoute = () => {
         growth: '₹60/ month',
         enterprise: '₹100/ month',
       },
+      {
+        modulePlane: 'Core HR',
+        starter: 'Limited',
+        essential: '✓',
+        growth: '✓',
+        enterprise: '✓',
+      },
       // Add more rows as needed
     ],
     []
   );
   
-
+const Counnt=styled.div`
+color: #454545;
+font-size: 15px;
+margin-bottom: 5px;
+`
   const columns = useMemo(
     () => [
       {
@@ -256,6 +267,7 @@ const PricingRoute = () => {
           <>
             <div>Starter</div>
             <div>₹ 0 / month</div>
+            <Counnt>(Includes 25 Employees)</Counnt>
             <ButtonOne>Start Free Trial</ButtonOne>
           </>
         ),
@@ -266,7 +278,8 @@ const PricingRoute = () => {
           <>
             <div>Essential</div>
             <div>₹ 3495 / month</div>
-            <button>Start Free Trial</button>
+            <Counnt>(Includes 50 Employees)</Counnt>
+            <ButtonOne>Start Free Trial</ButtonOne>
           </>
         ),
         accessor: 'essential',
@@ -276,7 +289,8 @@ const PricingRoute = () => {
           <>
             <div>Growth</div>
             <div>₹ 5495 / month</div>
-            <button>Start Free Trial</button>
+            <Counnt>(Includes 50 Employees)</Counnt>
+            <ButtonOne>Start Free Trial</ButtonOne>
           </>
         ),
         accessor: 'growth',
@@ -286,7 +300,8 @@ const PricingRoute = () => {
           <>
             <div>Enterprise</div>
             <div>₹ 7495 / month</div>
-            <button>Start Free Trial</button>
+            <Counnt>(Includes 50 Employees)</Counnt>
+            <ButtonOne>Start Free Trial</ButtonOne>
           </>
         ),
         accessor: 'enterprise',
