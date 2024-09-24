@@ -1,7 +1,6 @@
 import "./App.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 import { NavBar } from "./components/NavBar";
-// import { Footer } from "./components/Footer";
 import HomePage from "./components/HomePage";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import Login from "./components/loginpage/Login";
