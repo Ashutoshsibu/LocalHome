@@ -15,7 +15,7 @@ const HomePage = () => {
   return (
     <div>
     {/* <Banner></Banner> */}
-    <Resource></Resource>
+    {/* <Resource></Resource> */}
     <Skills></Skills>
     <UnlockFuture></UnlockFuture>
     <Features></Features>
