@@ -3,18 +3,19 @@ import Slider from "react-slick";
 import styled from "styled-components";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+import Lipika from './../assets/img/lipika.jpg'
 
 // Testimonial Data
 const testimonialData = [
   {
     id: 1,
-    name: "John Doe, CFO at Tech Innovators Inc.:",
+    name: "Dr Santosh Poddar, IISER, Pune",
     text:"Atomwalk’s ERP software has revolutionized our financial management. The seamless integration and user-friendly interface have significantly improved our operational efficiency.",
     img: "https://picsum.photos/101/101",
   },
   {
     id: 2,
-    name: "Jane Smith, Operations Manager at Green Solutions Ltd",
+    name: "Deepak Emanuel, Chief Operating Officer, FluxGen Sustainable Technologies Pvt Ltd",
     text: "The inventory management features of Atomwalk have been a game-changer for us. We can now track our stock levels in real-time, reducing waste and optimizing our supply chain.",
     img: "https://picsum.photos/102/102",
   },
@@ -28,7 +29,7 @@ const testimonialData = [
     id: 4,
     name: "Dr.Lipika Sahoo CEO at Lifeintelect Consultancy: ",
     text: "Implementing Atomwalk’s ERP system was one of the best decisions we’ve made. It has streamlined our processes, from accounting to project management, and provided us with valuable insights into our business performance.",
-    img: "https://picsum.photos/104/104",
+    img: `${Lipika}`,
   },
 ];
 

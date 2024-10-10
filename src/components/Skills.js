@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import Mnufacture from './../assets/img/manufacturing.png'
+import Mnufacture from './../assets/img/Manufacturing-Business-Development-Tips-1024x576.jpg'
 import Lab from './../assets/img/labmangement.jpg'
 import Chemical from './../assets/img/chemical.png'
 import Consultancy from './../assets/img/consaltant.jpg'
@@ -109,53 +109,55 @@ export const Skills = () => {
   const productnav=()=>{
     window.location.href="/product.html"
   }
+  const lmsmaneage=()=>{
+    window.location.href="/lms.html"
+  }
   return (
     <PageContainer>
       <Title>Streamlining Business Operations</Title>
-
-      <Section >
-        <IndustryContainer onClick={productnav} style={{backgroundColor:"#EDF5FF"}}>
-          <Image src={Chemical} alt="Chemical Industry" />
-          <Content>
-            <IndustryTitle>Chemical Industry Small Business</IndustryTitle>
-            <Description>
-              The chemical industry is a complex sector where the management of raw materials, production processes, and compliance with safety regulations is crucial. Implementing automated inventory management and production tracking can significantly reduce errors and increase efficiency.
-            </Description>
-          </Content>
-        </IndustryContainer>
-      </Section>
-
-      <Section>
-        <IndustryContainer onClick={productnav} style={{backgroundColor:"#E1FFF6"}}>
-          <Image src={Lab} alt="Lab Management System" />
-          <Content>
-            <IndustryTitle>Lab Management System</IndustryTitle>
-            <Description>
-              Laboratories require meticulous organization and data management. A robust Lab Management System (LMS) can automate processes such as sample tracking, data entry, and reporting, which streamlines operations and ensures compliance with industry standards.
-            </Description>
-          </Content>
-        </IndustryContainer>
-      </Section>
-
       <Section>
         <IndustryContainer  onClick={productnav} style={{backgroundColor:"#F6EAFF"}}>
           <Image src={Mnufacture} alt="Manufacturing Small Business" />
           <Content>
-            <IndustryTitle>Manufacturing Small Business</IndustryTitle>
+            <IndustryTitle>Discrete Manufacturing</IndustryTitle>
             <Description>
               In the manufacturing sector, optimizing production lines, managing supply chains, and maintaining equipment are vital. Implementing systems for real-time monitoring and predictive maintenance can improve productivity and reduce downtime.
             </Description>
           </Content>
         </IndustryContainer>
       </Section>
-
+      <Section >
+        <IndustryContainer onClick={productnav} style={{backgroundColor:"#EDF5FF"}}>
+          <Image src={Chemical} alt="Chemical Industry" />
+          <Content>
+            <IndustryTitle>Process Manufacturing</IndustryTitle>
+            <Description>
+            Production process (Recipe Management), Planning, Project/ Work
+            order management, Operational efficiency, Inventory (Batch expiry
+            tracking)/ Warehouse management, CRM, Accounting and Finan-
+            cial management, Supplier and Purchase Order management.
+            </Description>
+          </Content>
+        </IndustryContainer>
+      </Section>
       <Section>
         <IndustryContainer onClick={productnav} style={{backgroundColor:"#FFEADF"}}>
           <Image src={Consultancy} alt="Consultancy Business" />
           <Content>
-            <IndustryTitle>Consultancy Business</IndustryTitle>
+            <IndustryTitle>Consultancy, Services, Trading & NGOs</IndustryTitle>
             <Description>
-              For consultancy businesses, time management and client relationship management are key. Streamlining operations through project management software and CRM tools can enhance client satisfaction and increase operational efficiency.
+            Effective project management ensures timely completion of tasks, optimizing resources and teamwork. Operational efficiency focuses on streamlining processes for maximum productivity. Integrated systems for CRM, accounting, financial management, and supplier/purchase order management enhance decision-making, track finances, and ensure smooth supplier relations.
+            </Description>
+          </Content>
+        </IndustryContainer>
+      </Section>
+      <Section>
+        <IndustryContainer onClick={lmsmaneage} style={{backgroundColor:"#E1FFF6"}}>
+          <Image src={Lab} alt="Lab Management System" />
+          <Content>
+            <IndustryTitle>Lab Management</IndustryTitle>
+            <Description>
+              Laboratories require meticulous organization and data management. A robust Lab Management System (LMS) can automate processes such as sample tracking, data entry, and reporting, which streamlines operations and ensures compliance with industry standards.
             </Description>
           </Content>
         </IndustryContainer>

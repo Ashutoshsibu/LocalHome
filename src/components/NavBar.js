@@ -30,7 +30,7 @@ export const NavBar = () => {
   }
 
   const navigatet=()=>{
-    window.location.href="/signin.html"
+    window.location.href="https://www.atomwalk.com/login/"
   }
 
   return (
@@ -42,7 +42,7 @@ export const NavBar = () => {
           <Navbar.Toggle aria-controls="basic-navbar-nav">
             <span className="navbar-toggler-icon"></span>
           </Navbar.Toggle>
-          <Navbar.Collapse id="basic-navbar-nav">
+          <Navbar.Collapse id="basic-navbar-nav" className="mobile">
             <Nav className="ms-auto">
               <Nav.Link href="/Product.html" className={activeLink === 'Product' ? 'active navbar-link' : 'navbar-link'} onClick={() => onUpdateActiveLink('Product')}>Products</Nav.Link>
               <Nav.Link href="/pricing.html" className={activeLink === 'Pricing' ? 'active navbar-link' : 'navbar-link'} onClick={() => onUpdateActiveLink('Pricing')}>Pricing</Nav.Link>

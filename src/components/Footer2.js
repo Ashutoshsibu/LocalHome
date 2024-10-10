@@ -276,7 +276,7 @@ export default function Footer2() {
           <h3>Quick Links</h3>
           <ul>
             <li>
-              <a href="#home">Home</a>
+              <a href="/">Home</a>
             </li>
             <li>
               <a href="/aboutUs.html">About Us</a>
@@ -285,7 +285,7 @@ export default function Footer2() {
               <a href="#services">Services</a>
             </li>
             <li>
-              <a href="#contact">Contact Us</a>
+              <a href="/contactUs.html">Contact Us</a>
             </li>
           </ul>
         </FooterLinks>
@@ -311,7 +311,7 @@ export default function Footer2() {
           <h3>Resources</h3>
           <ul>
             <li>
-              <a href="#webdev">Blog</a>
+              <a href="/Blog.html">Blog</a>
             </li>
             <li>
               <a href="#appdev">Support</a>
@@ -333,7 +333,7 @@ export default function Footer2() {
           Privacy Policy | Terms & Conditions | Made with <span>♥</span> Atomwalk
         </p>
         <div className="social-icon">
-              <a href="#"><img src={navIcon1} alt="Icon" /></a>
+              <a href="https://www.linkedin.com/company/atomwalk-technologies/"><img src={navIcon1} alt="Icon" /></a>
               <a href="#"><img src={navIcon2} alt="Icon" /></a>
               <a href="#"><img src={navIcon3} alt="Icon" /></a>
             </div>

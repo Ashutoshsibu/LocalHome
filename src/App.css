@@ -90,9 +90,32 @@ nav.navbar {
   z-index: 9999;
   transition:  0.32s ease-in-out;
 }
+@media only screen and (max-width: 768px) {
+  .mobile {
+    /* background-color: rgb(255, 158, 120); */
+    /* background-color:rgb(227 227 227);*/
+    padding: 10px 10px; 
+    /* border-radius: 15px; */
+    /* border: 1px solid #ffffff20; */
+    background: #ffffff1a;
+    backdrop-filter: blur(16px) saturate(120%);
+    margin: -10px;
+
+  }
+}
+
 nav.navbar.scrolled {
   padding: 0px 0;
-  background-color:rgb(227 227 227);
+  /* background-color:rgb(227 227 227); */
+  border: 1px solid #1a050520;
+  background: #ffffff1a;
+  backdrop-filter: blur(16px) saturate(120%);
+  border-radius: 2px;
+}
+@media only screen and (max-width: 768px) {
+  nav.navbar.scrolled {
+    border-radius: 1px
+  }
 }
 nav.navbar a.navbar-brand {
     width: 9%;

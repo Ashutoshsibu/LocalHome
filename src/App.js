@@ -17,23 +17,44 @@ import ProductDemoModal from "./components/ProductDemoModal";
 import FormComponent from "./components/FormComponent";
 import PricingRoute from "./components/PricingRoute";
 import ContactSalesPage from "./components/ContactSalesPage";
+import AppPromo from "./components/AppPromo";
+import LabManagement from "./components/LabManagement";
+import Blog from "./components/Blog";
+import BlogDetails from "./components/BlogDetails";
 
 function App() {
-  const[openslide,setOpenslide]=useState(false)
-  const [modalIsOpen, setModalIsOpen] = useState(false);
-
-  const openModal = () => {
-    setModalIsOpen(true);
+  const[openslide,setOpenslide]=useState(false);
+  const url = 'https://www.atomwalk.com/rest-auth/login/';
+  const data = {
+  username: 'ASUTOSH@PMA_00001', // Replace with actual username
+  password: 'ashutosh@11'  // Replace with actual password
   };
-useEffect(()=>{
-  setTimeout(() => {
-    openModal()
-  }, 40000);
-
-},[])
-  const closeModal = () => {
-    setModalIsOpen(false);
-  };
+  useEffect(()=>{
+    if(!localStorage.getItem("apiResponse")){
+       loginAndStore();
+    }
+  },[])
+const loginAndStore=async()=>{
+  try {
+    const response = await fetch(url, {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json', // Specify that we're sending JSON
+      },
+      body: JSON.stringify(data) // Convert the data object to JSON string
+    });
+    if (!response.ok) {
+      throw new Error('Network response was not ok');
+    }
+    const responseData = await response.json();
+    console.log('API Response:', responseData);
+    localStorage.setItem('apiResponse', JSON.stringify(responseData));
+    alert('Login successful and response stored in localStorage!');
+  } catch (error) {
+    console.error('Error during login:', error);
+    alert('Login failed: ' + error.message);
+  }
+}
   return (
     <div className="App">
       <NavBar></NavBar>
@@ -49,10 +70,13 @@ useEffect(()=>{
           <Route path="/pricing.html" element={<PricingRoute />} />
           <Route path="/demo.html" element={<FormComponent />} />
           <Route path="/seals.html" element={<ContactSalesPage />} />
+          <Route path="/crm.html" element={<AppPromo/>} />
+          <Route path="/lms.html" element={<LabManagement/>} />
+          <Route path="/Blog.html" element={<Blog/>} />
+          <Route path="/BlogDetails.html" element={<BlogDetails/>} />
         </Routes>
       </Router>
       {openslide&&<Askme setOpenslide={setOpenslide}/>}
-      <ProductDemoModal isOpen={modalIsOpen} onRequestClose={closeModal} />
       <FloatingActionButton setOpenslide={setOpenslide}></FloatingActionButton>
       <Footer2></Footer2>
     </div>
