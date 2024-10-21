@@ -6,7 +6,7 @@ import TrackVisibility from 'react-on-screen';
 import { MailchimpForm } from "./MailchimpForm";
 import axios from "axios";
 
-export const Contact = () => {
+export const Contact = ({setShowsuccess}) => {
 let currentDate = new Date();
 let day = ("0" + currentDate.getDate()).slice(-2);  // Get current day
 let month = ("0" + (currentDate.getMonth() + 1)).slice(-2);  // Get current month
@@ -56,6 +56,7 @@ console.log(formDetails,"look at ne")
       if (response.status == 200) {
         setButtonText("Send");
         setFormDetails(formInitialDetails);
+        setShowsuccess(true)
       }
     } catch (error) {
       console.log('Error making authenticated API call:', error);

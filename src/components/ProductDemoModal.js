@@ -1,7 +1,7 @@
-import React from "react";
+import React, { useState } from "react";
 import styled from "styled-components";
 import Modal from "react-modal";
-
+import axios from "axios";
 // Import your image
 import rocketImage from "../assets/img/image.png"; // Replace with the correct path
 
@@ -120,7 +120,62 @@ const CloseButton = styled.button`
   }
 `;
 
-const ProductDemoModal = ({ isOpen, onRequestClose }) => {
+const ProductDemoModal = ({ isOpen, onRequestClose,setShowsuccess }) => {
+  let currentDate = new Date();
+let day = ("0" + currentDate.getDate()).slice(-2);  // Get current day
+let month = ("0" + (currentDate.getMonth() + 1)).slice(-2);  // Get current month
+let year = currentDate.getFullYear();
+// Format as DD-MM-YYYY
+let formattedDate = `${day}-${month}-${year}`;
+  const formInitialDetails = {
+    name: "",
+    company_name: "",
+    task_name: "Book My Demo",
+    mobile_number: "",
+    email_id: "",
+    add_task: "N",
+    task_type: "Book My Demo",
+    task_date: formattedDate,
+    remarks:"Book My Demo"
+}
+const [formDetails, setFormDetails] = useState(formInitialDetails);
+const onFormUpdate = (category, value) => {
+  setFormDetails({
+    ...formDetails,
+    [category]: value
+  })
+}
+const endpoint = 'https://www.atomwalk.com/api';
+const addLead =(e)=> {
+ e.preventDefault();
+ return authAxiosPost(`https://www.atomwalk.com/api/add_lead/PMA_00001/`,{ 'lead_data':formDetails});
+}
+const authAxiosPost = async (url, data) => {
+ try {
+   let token = localStorage.getItem('apiResponse');
+   let parsedToken = JSON.parse(token);
+   if (!token) {
+     throw new Error('Token not found, please login.');
+   }
+   const axiosInstance = axios.create({
+     baseURL: endpoint,
+     headers: {
+       Authorization: `Token ${parsedToken.key}`,
+     },
+   });
+   const response = await axiosInstance.post(url, data);
+   if (response.status == 200) {
+     setShowsuccess(true);
+     localStorage.setItem('datacheck',true);
+     setFormDetails(formInitialDetails);
+     onRequestClose()
+    
+   }
+ } catch (error) {
+   console.log('Error making authenticated API call:', error);
+   setFormDetails(formInitialDetails);
+ }
+};
   return (
     <Modal
       isOpen={isOpen}
@@ -135,11 +190,11 @@ const ProductDemoModal = ({ isOpen, onRequestClose }) => {
           <Description>
             See a demo of our product that's tailored just for you.
           </Description>
-          <Input type="text" placeholder="Your Name" />
-          <Input type="email" placeholder="Email" />
-          <Input type="tel" placeholder="Phone Number" />
-          <Input type="text" placeholder="Company Name" />
-          <Button>Book My Demo</Button>
+          <Input onChange={(e) => onFormUpdate('name', e.target.value)} type="text" placeholder="Your Name" />
+          <Input onChange={(e) => onFormUpdate('email_id', e.target.value)} type="email" placeholder="Email" />
+          <Input onChange={(e) => onFormUpdate('mobile_number', e.target.value)} type="tel" placeholder="Phone Number" />
+          <Input onChange={(e) => onFormUpdate('company_name', e.target.value)} type="text" placeholder="Company Name" />
+          <Button onClick={addLead}>Book My Demo</Button>
         </FormContainer>
         <ImageContainer>
           <img src={rocketImage} alt="Rocket" style={{ width: "100%" }} />

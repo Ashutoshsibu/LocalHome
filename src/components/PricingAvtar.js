@@ -126,7 +126,7 @@ const PricingAvtar = () => {
       <TestimonialContent>
         <Avatar src={Team} alt="Manoja" />
         <div style={{  color: "#2c3e50"}}>
-          <Quote>User-Friendly application, supportive team, and competitive price-value for money. Also, they do not charge for extra customized requirements.</Quote>
+          <Quote>With a user-friendly application, a dedicated support team, and an unmatched price-to-value ratio, we provide exceptional value. Plus, there are no hidden fees!</Quote>
         </div>
       </TestimonialContent>
       <Author>Manoj Kumar Sahoo</Author>
@@ -134,8 +134,8 @@ const PricingAvtar = () => {
     </TestimonialCard>
 
     <PricingSection>
-      <PricingHeading>Evaluating our pricing? We'll take the price challenge!</PricingHeading>
-      <PricingDescription>Our customers endorse we offer exceptional software and service at unchallenged prices. Our costs per license are the lowest in our category.</PricingDescription>
+      <PricingHeading>Looking to evaluate our pricing? We'll gladly take the price challenge!</PricingHeading>
+      <PricingDescription>Our customers consistently affirm that we deliver outstanding software and service at unbeatable prices. Our license fees are the most competitive in the industry.</PricingDescription>
       <Button href="/pricing.html">Plans and pricing</Button>
       <Button href="/demo.html" className="secondary">Discuss pricing</Button>
     </PricingSection>

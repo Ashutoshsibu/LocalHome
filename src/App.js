@@ -21,6 +21,7 @@ import AppPromo from "./components/AppPromo";
 import LabManagement from "./components/LabManagement";
 import Blog from "./components/Blog";
 import BlogDetails from "./components/BlogDetails";
+import Success from "./components/SuccessBanner";
 
 function App() {
   const[openslide,setOpenslide]=useState(false);
@@ -49,15 +50,14 @@ const loginAndStore=async()=>{
     const responseData = await response.json();
     console.log('API Response:', responseData);
     localStorage.setItem('apiResponse', JSON.stringify(responseData));
-    alert('Login successful and response stored in localStorage!');
   } catch (error) {
     console.error('Error during login:', error);
-    alert('Login failed: ' + error.message);
   }
 }
   return (
     <div className="App">
       <NavBar></NavBar>
+      {/* <Success message="We have successfully recorded your information."></Success> */}
       <Router>
         <Routes>
           <Route path="" element={<HomePage />} />
@@ -67,7 +67,7 @@ const loginAndStore=async()=>{
           <Route path="/Product.html" element={<Product />} />
           <Route path="/contactUs.html" element={<ContactUs />} />
           <Route path="/aboutUs.html" element={<AbotUs />} />
-          <Route path="/pricing.html" element={<PricingRoute />} />
+          {/* <Route path="/pricing.html" element={<PricingRoute />} /> */}
           <Route path="/demo.html" element={<FormComponent />} />
           <Route path="/seals.html" element={<ContactSalesPage />} />
           <Route path="/crm.html" element={<AppPromo/>} />

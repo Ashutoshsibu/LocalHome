@@ -11,23 +11,36 @@ import UnlockFuture from './UnlockFuture'
 import PricingAvtar from './PricingAvtar'
 import Testimonial from './Testimonial'
 import ProductDemoModal from './ProductDemoModal'
+import Success from './SuccessBanner'
 
 const HomePage = () => {
 const [modalIsOpen, setModalIsOpen] = useState(false);
+const[showsuccess,setShowsuccess]=useState(false);
+const token = localStorage.getItem('datacheck');
   const openModal = () => {
     setModalIsOpen(true);
   };
 useEffect(()=>{
-  setTimeout(() => {
+  if(!token){
+      setTimeout(() => {
     openModal()
-  }, 100000);
+  }, 200000);
+  }
 
 },[])
   const closeModal = () => {
     setModalIsOpen(false);
   };
+  useEffect(()=>{
+    if(showsuccess){
+      setTimeout(() => {
+        setShowsuccess(false);
+      }, 3000);
+    }
+  },[showsuccess])
   return (
     <div>
+      {showsuccess&&<Success message="We have successfully recorded your information."></Success>}
     {/* <Banner></Banner> */}
     <Resource></Resource>
     <Skills></Skills>
@@ -38,8 +51,8 @@ useEffect(()=>{
    <Testimonial></Testimonial>
     <Pricing></Pricing>
     <PricingAvtar></PricingAvtar>
-    <Contact></Contact>
-    <ProductDemoModal isOpen={modalIsOpen} onRequestClose={closeModal} />
+    <Contact setShowsuccess={setShowsuccess}></Contact>
+    <ProductDemoModal isOpen={modalIsOpen} onRequestClose={closeModal} setShowsuccess={setShowsuccess} />
     </div>
   )
 }

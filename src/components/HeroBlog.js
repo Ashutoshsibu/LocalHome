@@ -180,14 +180,14 @@ const HeroBlog = () => {
             <CardImage src={Pritam} alt="User 1" />
             <CardText>
               Ashutosh Mohapatra - Following<br />
-              Can You Pass This Apple-Orange Interview At Apple?
+              The Impact of Technology on the Workplace: Atomwalk CRM On-the-Go
             </CardText>
           </Card>
           <Card>
             <CardImage src={Ashutosh} alt="User 2" />
             <CardText>
-              Pritam Kumar Nayak - Music<br />
-              Stop Listening to Music, It Will Change Your Life
+              Pritam Kumar Nayak - Following<br />
+              Tips You Must know: Atomwalk HRM On-the-Go
             </CardText>
           </Card>
         </CardContainer>

@@ -282,7 +282,7 @@ export default function Footer2() {
               <a href="/aboutUs.html">About Us</a>
             </li>
             <li>
-              <a href="#services">Services</a>
+              <a href="/Product.html">Products</a>
             </li>
             <li>
               <a href="/contactUs.html">Contact Us</a>
@@ -291,7 +291,7 @@ export default function Footer2() {
         </FooterLinks>
 
         <FooterLinks>
-          <h3>Services</h3>
+          <h3>Products</h3>
           <ul>
             <li>
               <a href="#webdev">Manufacturing Business</a>
